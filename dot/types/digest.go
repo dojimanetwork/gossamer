@@ -101,3 +101,17 @@ func (SealDigest) Index() uint { return 5 }
 func (d SealDigest) String() string {
 	return fmt.Sprintf("SealDigest ConsensusEngineID=%s Data=0x%x", d.ConsensusEngineID.ToBytes(), d.Data)
 }
+
+// RuntimeEnvironmentUpdated indicates that changes regarding the Runtime code or heap pages occurred.
+type RuntimeEnvironmentUpdated struct {
+	ConsensusEngineID ConsensusEngineID
+	Data              []byte
+}
+
+// Index returns VDT index
+func (RuntimeEnvironmentUpdated) Index() uint { return 5 }
+
+// String returns the digest as a string
+func (d RuntimeEnvironmentUpdated) String() string {
+	return fmt.Sprintf("RuntimeEnvironmentUpdated ConsensusEngineID=%s Data=0x%x", d.ConsensusEngineID.ToBytes(), d.Data)
+}
