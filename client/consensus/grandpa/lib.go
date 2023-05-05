@@ -46,6 +46,7 @@ type S struct{}
 // TODO investigate best way to do this in go
 type TracingUnboundedReceiver struct{}
 
+// LinkHalf Link between the block importer and the background voter.
 type LinkHalf struct {
 	client      ClientForGrandpa
 	selectChain SelectChain
@@ -113,6 +114,12 @@ func (*VoterWork) New(grandpaParams GrandpaParams) *VoterWork {
 	return &VoterWork{}
 }
 
+// GenesisAuthoritySetProvider Provider for the Grandpa authority set configured on the genesis block.
+type GenesisAuthoritySetProvider interface {
+	// Get the authority set at the genesis block.
+	get()
+}
+
 // RunGrandpaVoter Run a GRANDPA voter as a task. Provide configuration and a link to a
 // block import worker that has already been instantiated with `block_import`.
 func RunGrandpaVoter(grandpaParams GrandpaParams) {
@@ -130,4 +137,13 @@ func RunGrandpaVoter(grandpaParams GrandpaParams) {
 
 	var voterWork *VoterWork
 	voterWork = voterWork.New(grandpaParams)
+}
+
+// BlockImport Make block importer and link half necessary to tie the background voter
+// to it.
+func BlockImport(client ClientForGrandpa,
+	genesisAuthoritiesProvider GenesisAuthoritySetProvider,
+	selectCHain SelectChain, _ Telemetry) (GrandpaBlockImport, LinkHalf, error) {
+
+	return GrandpaBlockImport{}, LinkHalf{}, nil
 }
