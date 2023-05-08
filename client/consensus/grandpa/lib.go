@@ -4,6 +4,7 @@
 package grandpa
 
 import (
+	"github.com/ChainSafe/gossamer/dot/types"
 	"github.com/ChainSafe/gossamer/lib/common"
 	"github.com/ChainSafe/gossamer/lib/crypto/ed25519"
 	"github.com/ChainSafe/gossamer/lib/keystore"
@@ -22,7 +23,54 @@ type SharedVoterState struct {
 }
 
 // ClientForGrandpa A trait that includes all the client functionalities grandpa requires.
-type ClientForGrandpa interface{}
+// TODO investigate how to deal with client/backend
+type ClientForGrandpa interface {
+	HeaderBackend
+}
+
+// HeaderBackend Blockchain database header backend. Does not perform any validation.
+// This is not located in grandpa, but is in primatives/blockchain/src/backend.rs
+// TODO investigate how to deal with backend
+type HeaderBackend interface {
+	header()
+	info() Info
+	status()
+	number()
+	hash()
+	block_hash_from_id()
+	block_number_from_id()
+	expect_header()
+	expect_block_number_from_id()
+	expect_block_hash_from_id()
+}
+
+// Gap is used to represent missing blocks after warp sync
+type Gap struct {
+	start uint
+	end   uint
+}
+
+// Info Blockchain info, this is also in backend
+type Info struct {
+	// Best block hash.
+	bestHash common.Hash
+	// Best block number.
+	bestNumber uint
+	// Genesis block hash.
+	genesisHash common.Hash
+	// The head of the finalized chain.
+	finalizedHash common.Hash
+	// Last finalized block number.
+	finalizedNumber uint
+	// Last finalized state.
+	// Below is actually an option containing a tuple TODO think about
+	finalizedStateHash   common.Hash
+	finalizedStateNumber uint
+	// Number of concurrent leave forks.
+	numberLeaves uintptr // TODO is this go equiv of usize?
+	// Missing blocks after warp sync. (start, end).
+	blockGap *Gap
+}
 
 // The SelectChain trait defines the strategy upon which the head is chosen
 // if multiple forks are present for an opaque definition of "best" in the
@@ -139,11 +187,68 @@ func RunGrandpaVoter(grandpaParams GrandpaParams) {
 	voterWork = voterWork.New(grandpaParams)
 }
 
+// A descriptor for an authority set hard fork. These are authority set changes
+// that are not signalled by the runtime and instead are defined off-chain
+// (hence the hard fork).
+type AuthoritySetHardFork struct {
+	// The new authority set id.
+	setId uint64
+	// The block hash and number at which the hard fork should be applied.
+	blockHash   common.Hash
+	blockNumber uint //verify this
+	// The authorities in the new set.
+	authorities []types.Authority // I believe this should work
+	// The latest block number that was finalized before this authority set
+	// hard fork. When defined, the authority set change will be forced, i.e.
+	// the node won't wait for the block above to be finalized before enacting
+	// the change, and the given finalized number will be used as a base for
+	// voting.
+	// option for block number
+	lastFinalized *uint
+}
+
 // BlockImport Make block importer and link half necessary to tie the background voter
 // to it.
 func BlockImport(client ClientForGrandpa,
 	genesisAuthoritiesProvider GenesisAuthoritySetProvider,
-	selectCHain SelectChain, _ Telemetry) (GrandpaBlockImport, LinkHalf, error) {
+	selectChain SelectChain, telemetry Telemetry) (GrandpaBlockImport, LinkHalf, error) {
 
-	return GrandpaBlockImport{}, LinkHalf{}, nil
+	return BlockImportWIthAuthoritySetHardForks(client, genesisAuthoritiesProvider, selectChain, []AuthoritySetHardFork{}, telemetry)
+}
+
+// BlockImportWIthAuthoritySetHardForks Make block importer and link half necessary to tie the background voter to
+// it. A vector of authority set hard forks can be passed, any authority set
+// change signaled at the given block (either already signalled or in a further
+// block when importing it) will be replaced by a standard change with the
+// given static authorities.
+func BlockImportWIthAuthoritySetHardForks(client ClientForGrandpa,
+	genesisAuthoritiesProvider GenesisAuthoritySetProvider,
+	selectChain SelectChain, authorities []AuthoritySetHardFork, telemetry Telemetry) (GrandpaBlockImport, LinkHalf, error) {
+
+	chainInfo := client.info()
+	_ = chainInfo.genesisHash
+
+	//get Persistant data using aux schema
+
+	// set up tracing unbounded sender and reciever
+
+	// set up notification stream for justification sender
+
+	// create pending change objects with 0 delay for each authority set hard fork.
+
+	grandpaBlockImport := GrandpaBlockImport{
+		inner:       client,
+		selectChain: selectChain,
+		// persistent_data.authority_set
+		//authoritySet: SharedAuthoritySet{},
+		telemetry: telemetry,
+	}
+
+	linkHalf := LinkHalf{
+		client:      client,
+		selectChain: selectChain,
+		telemetry:   telemetry,
+	}
+
+	return grandpaBlockImport, linkHalf, nil
 }
