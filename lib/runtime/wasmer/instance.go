@@ -268,6 +268,7 @@ func (in *Instance) Exec(function string, data []byte) (result []byte, err error
 	memory := in.ctx.Memory.Data()
 	copy(memory[inputPtr:inputPtr+dataLength], data)
 
+	fmt.Println("in.vm.Exports", in.vm.Exports)
 	runtimeFunc, err := in.vm.Exports.GetFunction(function)
 	if err != nil {
 		return nil, fmt.Errorf("%w: %s", ErrExportFunctionNotFound, function)

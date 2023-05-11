@@ -1049,6 +1049,32 @@ func ext_default_child_storage_clear_prefix_version_1(env interface{}, args []wa
 	return nil, nil
 }
 
+//export ext_default_child_storage_clear_prefix_version_2
+func ext_default_child_storage_clear_prefix_version_2(env interface{}, args []wasmer.Value) ([]wasmer.Value, error) {
+	logger.Debug("executing...")
+
+	instanceContext := env.(*runtime.Context)
+	storage := instanceContext.Storage
+	childStorageKey := args[0].I64()
+	prefixSpan := args[1].I64()
+	limitSpan := args[2].I64()
+
+	keyToChild := asMemorySlice(instanceContext, childStorageKey)
+	prefix := asMemorySlice(instanceContext, prefixSpan)
+
+	var limit *uint32
+	err := scale.Unmarshal(asMemorySlice(instanceContext, limitSpan), limit)
+	if err != nil {
+		logger.Errorf("failed to decode limit: %s", err)
+	}
+
+	err = storage.ClearPrefixInChildWithLimit(keyToChild, prefix, *limit)
+	if err != nil {
+		logger.Errorf("failed to clear prefix in child with limit: %s", err)
+	}
+	return []wasmer.Value{wasmer.NewI64(0)}, nil
+}
+
 //export ext_default_child_storage_exists_version_1
 func ext_default_child_storage_exists_version_1(env interface{}, args []wasmer.Value) ([]wasmer.Value, error) {
 	logger.Debug("executing...")
@@ -1160,6 +1186,12 @@ func ext_default_child_storage_root_version_1(env interface{}, args []wasmer.Val
 	}
 
 	return []wasmer.Value{wasmer.NewI64(root)}, nil
+}
+
+//export ext_default_child_storage_root_version_2
+func ext_default_child_storage_root_version_2(env interface{}, args []wasmer.Value) ([]wasmer.Value, error) {
+	// TODO: Implement this after we have storage trie version 1 implemented #2418
+	return ext_default_child_storage_root_version_1(env, args)
 }
 
 //export ext_default_child_storage_set_version_1
@@ -1564,6 +1596,23 @@ func ext_offchain_index_set_version_1(env interface{}, args []wasmer.Value) ([]w
 	copy(cp, newValue)
 
 	err := instanceContext.NodeStorage.BaseDB.Put(storageKey, cp)
+	if err != nil {
+		logger.Errorf("failed to set value in raw storage: %s", err)
+	}
+	return nil, nil
+}
+
+//export ext_offchain_index_clear_version_1
+func ext_offchain_index_clear_version_1(env interface{}, args []wasmer.Value) ([]wasmer.Value, error) {
+	// Remove a key and its associated value from the Offchain DB.
+	// https://github.com/paritytech/substrate/blob/4d608f9c42e8d70d835a748fa929e59a99497e90/primitives/io/src/lib.rs#L1213
+	logger.Trace("executing...")
+	instanceContext := env.(*runtime.Context)
+	keySpan := args[0].I64()
+
+	storageKey := asMemorySlice(instanceContext, keySpan)
+	err := instanceContext.NodeStorage.BaseDB.Del(storageKey)
+
 	if err != nil {
 		logger.Errorf("failed to set value in raw storage: %s", err)
 	}
