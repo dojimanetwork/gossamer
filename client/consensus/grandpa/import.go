@@ -4,12 +4,10 @@
 package grandpa
 
 import (
+	"github.com/ChainSafe/gossamer/client/consensus"
 	"github.com/ChainSafe/gossamer/dot/types"
 	"github.com/ChainSafe/gossamer/lib/common"
 )
-
-// TODO investigate how to impl this, this is just filler
-type SharedAuthoritySet struct{}
 
 // GrandpaBlockImport A block-import handler for GRANDPA.
 //
@@ -27,7 +25,8 @@ type GrandpaBlockImport struct {
 	// TODO figure out best way to do this in go
 	//sendVoterCommands TracingUnboundedSender
 	// TODO investigate this
-	//authoritySetHardForks HashMap<K, V, S = RandomState>
+	// It looks like grandpa changes are defined in state, why? Feel like best here
+	authoritySetHardForks map[common.Hash]consensus.PendingChange
 	// TODO more communication stuff
 	//justification_sender GrandpaJustificationSender
 	telemetry Telemetry
@@ -54,7 +53,7 @@ func (gbi *GrandpaBlockImport) importJustification(hash common.Hash, number uint
 	// wasn't part of the block and was requested asynchronously, probably
 	// makes sense to log in that case.
 	justification := []byte{} // dummy data
-	return gbi.importJustification(hash, number, justification, false, false)
+	gbi.importJustification2(hash, number, justification, false, false)
 }
 
 // GrandpaBlockImport impl
@@ -98,6 +97,6 @@ func (gbi *GrandpaBlockImport) new() {
 //
 // If `enacts_change` is set to true, then finalizing this block *must*
 // enact an authority set change, the function will panic otherwise.
-func (gbi *GrandpaBlockImport) importJustification(hash common.Hash, number uint, justification []byte, enactsChange bool, initialSync bool) {
+func (gbi *GrandpaBlockImport) importJustification2(hash common.Hash, number uint, justification []byte, enactsChange bool, initialSync bool) {
 	// TODO implement
 }
