@@ -4,18 +4,30 @@
 package grandpa
 
 import (
+	"errors"
 	"github.com/ChainSafe/gossamer/dot/types"
+	"github.com/ChainSafe/gossamer/lib/common"
 )
 
 // AuthorityList A list of Grandpa authorities with associated weights.
 type AuthorityList []types.Authority
+
+// DelayKind Kinds of delays for pending changes.
+// This is an enum
+type DelayKind struct {
+	// TODO impl
+}
 
 // PendingChange A pending change to the authority set.
 //
 // This will be applied when the announcing block is at some depth within
 // the finalized or unfinalized chain.
 type PendingChange struct {
-	// TODO impl
+	nextAuthorities AuthorityList
+	delay           uint
+	canonHeight     uint
+	canonHash       common.Hash
+	delayKind       DelayKind
 }
 
 // AuthoritySetChanges Tracks historical authority set changes. We store the block numbers for the last block
@@ -50,6 +62,36 @@ type AuthoritySet struct {
 	// started/ended.
 	authoritySetChanges AuthoritySetChanges
 }
+
+// InvalidAuthorityList authority sets must be non-empty and all weights must be greater than 0
+func (authSet *AuthoritySet) InvalidAuthorityList(authorities AuthorityList) bool {
+	if len(authorities) == 0 {
+		return false
+	}
+
+	for _, authority := range authorities {
+		if authority.Weight == 0 {
+			return false
+		}
+	}
+	return true
+}
+
+func (authSet *AuthoritySet) AddPendingChange(pending PendingChange, isDescendentOf bool) error {
+	if authSet.InvalidAuthorityList(pending.nextAuthorities) {
+		return errors.New("invalid authority set, either empty or with an authority weight set to 0")
+	}
+
+	return nil
+}
+
+// Get the earliest limit-block number, if any. If there are pending changes across
+// different forks, this method will return the earliest effective number (across the
+// different branches) that is higher or equal to the given min number.
+//
+// Only standard changes are taken into account for the current
+// limit, since any existing forced change should preclude the voter from voting.
+func (authSet *AuthoritySet) CurrentLimit(min uint) {}
 
 // SharedAuthoritySet A shared authority set.
 // TODO thought: I wonder if I can just hold the data and a mutex for this case?
