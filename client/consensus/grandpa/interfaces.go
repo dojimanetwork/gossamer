@@ -3,6 +3,7 @@ package grandpa
 import (
 	"encoding/json"
 	"github.com/ChainSafe/gossamer/dot/network"
+	"github.com/ChainSafe/gossamer/lib/common"
 	"github.com/libp2p/go-libp2p/core/peer"
 	"github.com/libp2p/go-libp2p/core/protocol"
 )
@@ -15,7 +16,9 @@ import (
 // in order. Each node is uniquely identified by its hash but can be ordered by
 // its number. In order to build the tree an external function must be provided
 // when interacting with the tree to establish a node's ancestry.
-type ForkTree interface{}
+type ForkTree interface {
+	Import(hash common.Hash, number uint, change PendingChange, isDescendentOf IsDescendentOf) error
+}
 
 // Network is the interface required by GRANDPA for the network
 type Network interface {

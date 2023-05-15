@@ -65,15 +65,15 @@ type AuthoritySet struct {
 // InvalidAuthorityList authority sets must be non-empty and all weights must be greater than 0
 func (authSet *AuthoritySet) InvalidAuthorityList(authorities AuthorityList) bool {
 	if len(authorities) == 0 {
-		return false
+		return true
 	}
 
 	for _, authority := range authorities {
 		if authority.Weight == 0 {
-			return false
+			return true
 		}
 	}
-	return true
+	return false
 }
 
 type IsDescendentOf func(h1 common.Hash, h2 common.Hash) (bool, error)
@@ -91,9 +91,9 @@ func (authSet *AuthoritySet) AddPendingChange(pending PendingChange, isDescenden
 
 	switch pending.delayKind.value.(type) {
 	case Finalized:
-		return authSet.AddForcedChange(pending, isDescendentOf)
-	case Best:
 		return authSet.AddStandardChange(pending, isDescendentOf)
+	case Best:
+		return authSet.AddForcedChange(pending, isDescendentOf)
 	default:
 		panic("delayKind is invalid type")
 	}
@@ -156,7 +156,20 @@ func (authSet *AuthoritySet) AddForcedChange(pending PendingChange, isDescendent
 }
 
 func (authSet *AuthoritySet) AddStandardChange(pending PendingChange, isDescendentOf IsDescendentOf) error {
-	// TODO
+	hash := pending.canonHash
+	number := pending.canonHeight
+
+	logger.Debugf(
+		"inserting potential standard set change signaled at block %d (delayed by %d blocks).",
+		number, pending.delay,
+	)
+
+	err := authSet.pendingStandardChanges.Import(hash, number, pending, isDescendentOf)
+	if err != nil {
+		return err
+	}
+
+	// TODO substrate has a log here
 	return nil
 }
 

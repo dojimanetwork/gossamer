@@ -1,3 +1,3 @@
 package grandpa
 
-//go:generate mockgen -destination=mocks/mocks.go -package mocks . ForkTree
+//go:generate mockgen -destination=mocks_test.go -package grandpa . ForkTree

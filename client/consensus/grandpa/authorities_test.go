@@ -4,7 +4,6 @@
 package grandpa
 
 import (
-	"github.com/ChainSafe/gossamer/client/consensus/grandpa/mocks"
 	"github.com/ChainSafe/gossamer/dot/types"
 	"github.com/ChainSafe/gossamer/lib/common"
 	"github.com/ChainSafe/gossamer/lib/crypto/ed25519"
@@ -13,13 +12,12 @@ import (
 	"testing"
 )
 
-func staticIsDescendentOf(value bool) IsDescendentOfNew {
+func staticIsDescendentOf(value bool) IsDescendentOf {
 	return func(common.Hash, common.Hash) (bool, error) { return value, nil }
 }
 
 func TestCurrentLimitFiltersMin(t *testing.T) {
 	var currentAuthorities AuthorityList
-	//pubKey, err := ed25519.NewPublicKey(input)
 	kp, err := ed25519.GenerateKeypair()
 	require.NoError(t, err)
 	currentAuthorities = append(currentAuthorities, types.Authority{
@@ -27,23 +25,15 @@ func TestCurrentLimitFiltersMin(t *testing.T) {
 		Weight: 1,
 	})
 
-	ctrl := gomock.NewController(t)
-	mockForkTree := mocks.NewMockForkTree(ctrl)
-
-	authorities := AuthoritySet{
-		currentAuthorities:     currentAuthorities,
-		setId:                  0,
-		pendingStandardChanges: mockForkTree,
-		pendingForcedChanges:   []PendingChange{},
-		authoritySetChanges:    AuthoritySetChanges{},
-	}
+	finalizedKind := Finalized{}
+	delayKind := NewDelayKind(finalizedKind)
 
 	pendingChange1 := PendingChange{
 		nextAuthorities: currentAuthorities,
 		delay:           0,
 		canonHeight:     1,
 		canonHash:       common.BytesToHash([]byte{1}),
-		delayKind:       DelayKind{},
+		delayKind:       delayKind,
 	}
 
 	pendingChange2 := PendingChange{
@@ -51,13 +41,36 @@ func TestCurrentLimitFiltersMin(t *testing.T) {
 		delay:           0,
 		canonHeight:     2,
 		canonHash:       common.BytesToHash([]byte{2}),
-		delayKind:       DelayKind{},
+		delayKind:       delayKind,
 	}
 
-	err = authorities.AddPendingChange(pendingChange1, staticIsDescendentOf(false))
+	ctrl := gomock.NewController(t)
+	mockForkTree1 := NewMockForkTree(ctrl)
+	mockForkTree1.EXPECT().Import(common.BytesToHash([]byte{1}), uint(1), pendingChange1, gomock.Any())
+
+	mockForkTree2 := NewMockForkTree(ctrl)
+	mockForkTree2.EXPECT().Import(common.BytesToHash([]byte{2}), uint(2), pendingChange2, gomock.Any())
+
+	authorities1 := AuthoritySet{
+		currentAuthorities:     currentAuthorities,
+		setId:                  0,
+		pendingStandardChanges: mockForkTree1,
+		pendingForcedChanges:   []PendingChange{},
+		authoritySetChanges:    AuthoritySetChanges{},
+	}
+
+	authorities2 := AuthoritySet{
+		currentAuthorities:     currentAuthorities,
+		setId:                  0,
+		pendingStandardChanges: mockForkTree2,
+		pendingForcedChanges:   []PendingChange{},
+		authoritySetChanges:    AuthoritySetChanges{},
+	}
+
+	err = authorities1.AddPendingChange(pendingChange1, staticIsDescendentOf(false))
 	require.NoError(t, err)
 
-	err = authorities.AddPendingChange(pendingChange2, staticIsDescendentOf(false))
+	err = authorities2.AddPendingChange(pendingChange2, staticIsDescendentOf(false))
 	require.NoError(t, err)
 
 	//require.Equal(t, authorities.current)
