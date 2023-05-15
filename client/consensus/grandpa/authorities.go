@@ -12,12 +12,6 @@ import (
 // AuthorityList A list of Grandpa authorities with associated weights.
 type AuthorityList []types.Authority
 
-// DelayKind Kinds of delays for pending changes.
-// This is an enum
-type DelayKind struct {
-	// TODO impl
-}
-
 // PendingChange A pending change to the authority set.
 //
 // This will be applied when the announcing block is at some depth within
@@ -77,13 +71,32 @@ func (authSet *AuthoritySet) InvalidAuthorityList(authorities AuthorityList) boo
 	return true
 }
 
+// AddPendingChange Note an upcoming pending transition. Multiple pending standard changes
+// on the same branch can be added as long as they don't overlap. Forced
+// changes are restricted to one per fork. This method assumes that changes
+// on the same branch will be added in-order. The given function
+// `is_descendent_of` should return `true` if the second hash (target) is a
+// descendent of the first hash (base).
 func (authSet *AuthoritySet) AddPendingChange(pending PendingChange, isDescendentOf bool) error {
 	if authSet.InvalidAuthorityList(pending.nextAuthorities) {
 		return errors.New("invalid authority set, either empty or with an authority weight set to 0")
 	}
 
+	switch pending.delayKind.value.(type) {
+	case Finalized:
+		authSet.AddForcedChange()
+	case Best:
+		authSet.AddStandardChange()
+	default:
+		panic("delayKind is invalid type")
+	}
+
 	return nil
 }
+
+func (authSet *AuthoritySet) AddForcedChange() {}
+
+func (authSet *AuthoritySet) AddStandardChange() {}
 
 // Get the earliest limit-block number, if any. If there are pending changes across
 // different forks, this method will return the earliest effective number (across the
