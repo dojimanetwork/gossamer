@@ -4,7 +4,6 @@
 package grandpa
 
 import (
-	"github.com/ChainSafe/gossamer/client/consensus"
 	"github.com/ChainSafe/gossamer/dot/types"
 	"github.com/ChainSafe/gossamer/lib/common"
 )
@@ -26,7 +25,7 @@ type GrandpaBlockImport struct {
 	//sendVoterCommands TracingUnboundedSender
 	// TODO investigate this
 	// It looks like grandpa changes are defined in state, why? Feel like best here
-	authoritySetHardForks map[common.Hash]consensus.PendingChange
+	authoritySetHardForks map[common.Hash]PendingChange
 	// TODO more communication stuff
 	//justification_sender GrandpaJustificationSender
 	telemetry Telemetry

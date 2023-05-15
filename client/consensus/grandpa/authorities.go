@@ -7,11 +7,6 @@ import (
 	"github.com/ChainSafe/gossamer/dot/types"
 )
 
-// The tests here seem pretty contained compared to rest of tests, maybe good starting point
-
-// ForkTree Think this can just be an interface
-type ForkTree struct{}
-
 // AuthorityList A list of Grandpa authorities with associated weights.
 type AuthorityList []types.Authority
 
