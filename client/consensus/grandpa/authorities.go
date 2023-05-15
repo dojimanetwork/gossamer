@@ -5,6 +5,7 @@ package grandpa
 
 import (
 	"errors"
+	"fmt"
 	"github.com/ChainSafe/gossamer/dot/types"
 	"github.com/ChainSafe/gossamer/lib/common"
 )
@@ -22,6 +23,10 @@ type PendingChange struct {
 	canonHeight     uint
 	canonHash       common.Hash
 	delayKind       DelayKind
+}
+
+func (pc *PendingChange) EffectiveNumber() uint {
+	return pc.canonHeight + pc.delay
 }
 
 // AuthoritySetChanges Tracks historical authority set changes. We store the block numbers for the last block
@@ -71,22 +76,24 @@ func (authSet *AuthoritySet) InvalidAuthorityList(authorities AuthorityList) boo
 	return true
 }
 
+type IsDescendentOf func(h1 common.Hash, h2 common.Hash) (bool, error)
+
 // AddPendingChange Note an upcoming pending transition. Multiple pending standard changes
 // on the same branch can be added as long as they don't overlap. Forced
 // changes are restricted to one per fork. This method assumes that changes
 // on the same branch will be added in-order. The given function
 // `is_descendent_of` should return `true` if the second hash (target) is a
 // descendent of the first hash (base).
-func (authSet *AuthoritySet) AddPendingChange(pending PendingChange, isDescendentOf bool) error {
+func (authSet *AuthoritySet) AddPendingChange(pending PendingChange, isDescendentOf IsDescendentOf) error {
 	if authSet.InvalidAuthorityList(pending.nextAuthorities) {
 		return errors.New("invalid authority set, either empty or with an authority weight set to 0")
 	}
 
 	switch pending.delayKind.value.(type) {
 	case Finalized:
-		authSet.AddForcedChange()
+		return authSet.AddForcedChange(pending, isDescendentOf)
 	case Best:
-		authSet.AddStandardChange()
+		return authSet.AddStandardChange(pending, isDescendentOf)
 	default:
 		panic("delayKind is invalid type")
 	}
@@ -94,11 +101,66 @@ func (authSet *AuthoritySet) AddPendingChange(pending PendingChange, isDescenden
 	return nil
 }
 
-func (authSet *AuthoritySet) AddForcedChange() {}
+type Key struct {
+	effectiveNumber   uint
+	signalBlockNumber uint
+}
 
-func (authSet *AuthoritySet) AddStandardChange() {}
+func (k *Key) Equals(key Key) bool {
+	if key.effectiveNumber == k.effectiveNumber &&
+		key.signalBlockNumber == k.signalBlockNumber {
+		return true
+	}
+	return false
+}
 
-// Get the earliest limit-block number, if any. If there are pending changes across
+func (authSet *AuthoritySet) AddForcedChange(pending PendingChange, isDescendentOf IsDescendentOf) error {
+	for _, change := range authSet.pendingForcedChanges {
+		if change.canonHash == pending.canonHash {
+			return errors.New("duplicate authority set change")
+		}
+
+		isDescendent, err := isDescendentOf(change.canonHash, pending.canonHash)
+		if err != nil {
+			return fmt.Errorf("checking isDescendentOf")
+		}
+
+		if isDescendent {
+			return errors.New("multiple pending forced authority set changes are not allowed")
+		}
+	}
+
+	key := Key{
+		pending.EffectiveNumber(),
+		pending.canonHeight,
+	}
+
+	idx, err := SearchKey(key, authSet.pendingForcedChanges)
+	if err != nil {
+		return err
+	}
+
+	logger.Debugf(
+		"inserting potential forced set change at block number %d (delayed by %d blocks).",
+		pending.canonHeight, pending.delay,
+	)
+
+	authSet.pendingForcedChanges[idx] = pending
+
+	logger.Debugf(
+		"there are now %d pending forced changes",
+		len(authSet.pendingForcedChanges),
+	)
+
+	return nil
+}
+
+func (authSet *AuthoritySet) AddStandardChange(pending PendingChange, isDescendentOf IsDescendentOf) error {
+	// TODO
+	return nil
+}
+
+// CurrentLimit Get the earliest limit-block number, if any. If there are pending changes across
 // different forks, this method will return the earliest effective number (across the
 // different branches) that is higher or equal to the given min number.
 //

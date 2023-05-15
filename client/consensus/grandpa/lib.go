@@ -5,6 +5,7 @@ package grandpa
 
 import (
 	"github.com/ChainSafe/gossamer/dot/types"
+	"github.com/ChainSafe/gossamer/internal/log"
 	"github.com/ChainSafe/gossamer/lib/common"
 	"github.com/ChainSafe/gossamer/lib/crypto/ed25519"
 	"github.com/ChainSafe/gossamer/lib/keystore"
@@ -12,6 +13,8 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"time"
 )
+
+var logger = log.NewFromGlobal(log.AddContext("consensus", "grandpa"))
 
 // AuthorityId Identity of a Grandpa authority.
 type AuthorityId = ed25519.PublicKeyBytes

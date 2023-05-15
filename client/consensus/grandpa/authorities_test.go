@@ -13,12 +13,8 @@ import (
 	"testing"
 )
 
-//	fn static_is_descendent_of<A>(value: bool) -> impl Fn(&A, &A) -> Result<bool, std::io::Error> {
-//		move |_, _| Ok(value)
-//	}
-func staticIsDescendentOf(value bool) (bool, error) {
-	// TODO figure out
-	return false, nil
+func staticIsDescendentOf(value bool) IsDescendentOfNew {
+	return func(common.Hash, common.Hash) (bool, error) { return value, nil }
 }
 
 func TestCurrentLimitFiltersMin(t *testing.T) {
@@ -58,13 +54,10 @@ func TestCurrentLimitFiltersMin(t *testing.T) {
 		delayKind:       DelayKind{},
 	}
 
-	// Maybe need this to be func, but for now using bool
-	isDescendentOf := false
-
-	err = authorities.AddPendingChange(pendingChange1, isDescendentOf)
+	err = authorities.AddPendingChange(pendingChange1, staticIsDescendentOf(false))
 	require.NoError(t, err)
 
-	err = authorities.AddPendingChange(pendingChange2, isDescendentOf)
+	err = authorities.AddPendingChange(pendingChange2, staticIsDescendentOf(false))
 	require.NoError(t, err)
 
 	//require.Equal(t, authorities.current)

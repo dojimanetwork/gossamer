@@ -9,13 +9,13 @@ type DelayKind struct {
 	value interface{}
 }
 
-func setDelayKind[T DelayedKinds](delayKind *DelayKind, val T) {
+func SetDelayKind[T DelayedKinds](delayKind *DelayKind, val T) {
 	delayKind.value = val
 }
 
-func newDelayKind[T DelayedKinds](val T) DelayKind {
+func NewDelayKind[T DelayedKinds](val T) DelayKind {
 	delayKind := DelayKind{}
-	setDelayKind(&delayKind, val)
+	SetDelayKind(&delayKind, val)
 	return delayKind
 }
 
