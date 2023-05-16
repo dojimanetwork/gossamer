@@ -66,6 +66,7 @@ func (ft *ForkTree[V]) findNodeWhere(hash common.Hash, number uint, isDescendent
 // return a wrong result.
 func (ft *ForkTree[V]) findNodeIndexWhere(hash common.Hash, number uint, isDescendentOf IsDescendentOf, predicate predicate) (*[]uintptr, error) {
 	var stack stack[V]
+
 	rootIdx := 0
 	//found := false
 	//isDescendent := false

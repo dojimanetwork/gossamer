@@ -5,6 +5,8 @@ package ForkTree
 
 import "golang.org/x/exp/slices"
 
+// TODO should I use this instead https://github.com/zeroflucs-given/generics
+
 type stackElem[V any] struct {
 	node node[V]
 	val  uintptr
