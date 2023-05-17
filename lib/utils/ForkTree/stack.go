@@ -3,8 +3,6 @@
 
 package ForkTree
 
-import "golang.org/x/exp/slices"
-
 // TODO should I use this instead https://github.com/zeroflucs-given/generics
 
 type stackElem[V any] struct {
@@ -14,10 +12,25 @@ type stackElem[V any] struct {
 
 type stack[V any] []stackElem[V]
 
-func (s stack[V]) push(elem stackElem[V]) {
-	s = append(s, elem)
+func (s *stack[V]) push(elem stackElem[V]) {
+	*s = append(*s, elem)
 }
 
-func (s stack[V]) pop() stack[V] {
-	return slices.Delete(s, len(s)-1, len(s))
+func (s *stack[V]) pop() stackElem[V] {
+	n := len(*s) - 1
+	newS := *s
+	val := newS[n]
+	newS = newS[:n]
+	*s = newS[:n]
+	return val
+}
+
+func (s *stack[V]) len() int {
+	return len(*s)
+}
+
+func (s *stack[V]) peek() stackElem[V] {
+	newS := *s
+	val := newS[len(*s)-1]
+	return val
 }
