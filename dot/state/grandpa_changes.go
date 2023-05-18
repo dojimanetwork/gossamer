@@ -30,6 +30,7 @@ func (p *pendingChange) effectiveNumber() uint {
 	return p.announcingHeader.Number + uint(p.delay)
 }
 
+// FOrced changes
 type orderedPendingChanges []pendingChange
 
 func (oc *orderedPendingChanges) Len() int { return len(*oc) }
