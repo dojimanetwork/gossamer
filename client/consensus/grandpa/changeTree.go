@@ -13,6 +13,10 @@ import (
 	TODO give a summary of how this works in context of grandpa
 */
 
+var (
+	errUnfinalizedAncestor = errors.New("finalized descendent of Tree node without finalizing its ancestor(s) first")
+)
+
 // Represents a node in the ChangeTree
 type pendingChangeNode struct {
 	change   *PendingChange
@@ -189,7 +193,7 @@ func (ct *ChangeTree) FinalizeWithDescendentIf(hash *common.Hash, number uint, i
 					return nil, err
 				}
 				if child.change.canonHeight <= number && (child.change.canonHash == *hash || isDesc) {
-					return nil, fmt.Errorf("finalized descendent of Tree node without finalizing its ancestor(s) first")
+					return nil, errUnfinalizedAncestor
 				}
 			}
 			uintI := uint(i)
