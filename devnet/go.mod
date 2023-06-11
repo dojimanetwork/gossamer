@@ -1,6 +1,6 @@
-module github.com/ChainSafe/gossamer/devnet
+module github.com/dojimanetwork/gossamer/devnet
 
-go 1.20
+go 1.19
 
 require (
 	github.com/aws/aws-sdk-go v1.42.22

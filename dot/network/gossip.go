@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/ChainSafe/gossamer/internal/log"
-	"github.com/ChainSafe/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/lib/common"
 )
 
 // gossip submodule

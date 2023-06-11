@@ -7,11 +7,11 @@ import (
 	"io"
 	"testing"
 
-	"github.com/ChainSafe/gossamer/internal/log"
-	"github.com/ChainSafe/gossamer/lib/crypto"
-	"github.com/ChainSafe/gossamer/lib/crypto/ed25519"
-	"github.com/ChainSafe/gossamer/lib/crypto/secp256k1"
-	"github.com/ChainSafe/gossamer/lib/crypto/sr25519"
+	"github.com/dojimanetwork/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/lib/crypto"
+	"github.com/dojimanetwork/gossamer/lib/crypto/ed25519"
+	"github.com/dojimanetwork/gossamer/lib/crypto/secp256k1"
+	"github.com/dojimanetwork/gossamer/lib/crypto/sr25519"
 
 	"github.com/stretchr/testify/require"
 )

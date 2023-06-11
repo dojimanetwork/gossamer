@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/ChainSafe/gossamer/dot/rpc/modules/mocks"
+	"github.com/dojimanetwork/gossamer/dot/rpc/modules/mocks"
 	"github.com/golang/mock/gomock"
 
 	"github.com/stretchr/testify/assert"

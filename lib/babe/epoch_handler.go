@@ -8,8 +8,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/crypto/sr25519"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/crypto/sr25519"
 )
 
 type handleSlotFunc = func(epoch uint64, slot Slot, authorityIndex uint32,

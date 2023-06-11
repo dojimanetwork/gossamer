@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 // Body is the extrinsics(not encoded) inside a state block.

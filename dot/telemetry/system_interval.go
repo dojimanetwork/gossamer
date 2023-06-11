@@ -8,7 +8,7 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/ChainSafe/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/common"
 )
 
 type systemIntervalTM SystemInterval

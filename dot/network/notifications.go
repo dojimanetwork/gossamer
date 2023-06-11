@@ -13,7 +13,7 @@ import (
 	"github.com/libp2p/go-libp2p/core/peer"
 	"github.com/libp2p/go-libp2p/core/protocol"
 
-	"github.com/ChainSafe/gossamer/dot/peerset"
+	"github.com/dojimanetwork/gossamer/dot/peerset"
 )
 
 const handshakeTimeout = time.Second * 10

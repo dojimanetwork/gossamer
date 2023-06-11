@@ -6,7 +6,7 @@ package babe
 import (
 	"encoding/json"
 
-	"github.com/ChainSafe/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/dot/types"
 )
 
 // Runtime is the runtime interface for the babe package.

@@ -8,12 +8,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/genesis"
-	"github.com/ChainSafe/gossamer/lib/runtime/wasmer"
-	"github.com/ChainSafe/gossamer/lib/trie"
-	"github.com/ChainSafe/gossamer/lib/utils"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/genesis"
+	"github.com/dojimanetwork/gossamer/lib/runtime/wasmer"
+	"github.com/dojimanetwork/gossamer/lib/trie"
+	"github.com/dojimanetwork/gossamer/lib/utils"
 	"github.com/stretchr/testify/require"
 )
 
@@ -31,7 +31,7 @@ func newTriesEmpty() *Tries {
 func newGenerator() (prng *rand.Rand) {
 	seed := time.Now().UnixNano()
 	source := rand.NewSource(seed)
-	return rand.New(source) //skipcq: GSC-G404
+	return rand.New(source) // skipcq: GSC-G404
 }
 
 func generateKeyValues(tb testing.TB, generator *rand.Rand, size int) (kv map[string][]byte) {

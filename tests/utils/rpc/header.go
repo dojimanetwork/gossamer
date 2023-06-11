@@ -6,9 +6,9 @@ package rpc
 import (
 	"fmt"
 
-	"github.com/ChainSafe/gossamer/dot/rpc/modules"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/dot/rpc/modules"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/common"
 )
 
 // headerResponseToHeader converts a *ChainBlockHeaderResponse to a *types.Header

@@ -5,4 +5,4 @@ package rpc
 
 //go:generate mockgen -destination=mocks_test.go -package=$GOPACKAGE . API,TransactionStateAPI
 //go:generate mockgen -destination=mock_telemetry_test.go -package $GOPACKAGE . Telemetry
-//go:generate mockgen -destination=mock_network_test.go -package $GOPACKAGE github.com/ChainSafe/gossamer/dot/core Network
+//go:generate mockgen -destination=mock_network_test.go -package $GOPACKAGE github.com/dojimanetwork/gossamer/dot/core Network

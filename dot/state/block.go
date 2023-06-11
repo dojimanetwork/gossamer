@@ -12,17 +12,17 @@ import (
 	"time"
 
 	"github.com/ChainSafe/chaindb"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/blocktree"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/runtime"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/blocktree"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/runtime"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
 	"golang.org/x/exp/slices"
 
-	rtstorage "github.com/ChainSafe/gossamer/lib/runtime/storage"
-	"github.com/ChainSafe/gossamer/lib/runtime/wasmer"
+	rtstorage "github.com/dojimanetwork/gossamer/lib/runtime/storage"
+	"github.com/dojimanetwork/gossamer/lib/runtime/wasmer"
 )
 
 const (
@@ -919,7 +919,7 @@ func (bs *BlockState) GetRuntime(blockHash common.Hash) (instance runtime.Instan
 		// in this case the node is not in the blocktree which mean
 		// it is a finalized node already persisted in database
 		if errors.Is(err, blocktree.ErrNodeNotFound) {
-			panic(err.Error() + " see https://github.com/ChainSafe/gossamer/issues/3066")
+			panic(err.Error() + " see https://github.com/dojimanetwork/gossamer/issues/3066")
 		}
 
 		return nil, fmt.Errorf("while getting runtime: %w", err)

@@ -9,9 +9,9 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/runtime"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/runtime"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 // StateGetReadProofRequest json fields

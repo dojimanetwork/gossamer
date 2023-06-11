@@ -10,11 +10,11 @@ import (
 
 	"google.golang.org/protobuf/proto"
 
-	pb "github.com/ChainSafe/gossamer/dot/network/proto"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/common/variadic"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	pb "github.com/dojimanetwork/gossamer/dot/network/proto"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/common/variadic"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 // Message types for notifications protocol messages. Used internally to map message to protocol.

@@ -7,10 +7,10 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/ChainSafe/gossamer/internal/trie/codec"
-	"github.com/ChainSafe/gossamer/internal/trie/node"
-	"github.com/ChainSafe/gossamer/internal/trie/tracking"
-	"github.com/ChainSafe/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/internal/trie/codec"
+	"github.com/dojimanetwork/gossamer/internal/trie/node"
+	"github.com/dojimanetwork/gossamer/internal/trie/tracking"
+	"github.com/dojimanetwork/gossamer/lib/common"
 )
 
 // EmptyHash is the empty trie hash.
@@ -885,7 +885,7 @@ func (t *Trie) clearPrefixLimitChild(branch *Node, prefix []byte, limit uint32,
 	if child == nil {
 		const valuesDeleted, nodesRemoved = 0, 0
 		// TODO ensure this is the same behaviour as in substrate
-		// See https://github.com/ChainSafe/gossamer/issues/3033
+		// See https://github.com/dojimanetwork/gossamer/issues/3033
 		allDeleted = true
 		return newParent, valuesDeleted, nodesRemoved, allDeleted, nil
 	}

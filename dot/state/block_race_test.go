@@ -8,8 +8,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/trie"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/trie"
 	"github.com/golang/mock/gomock"
 
 	"github.com/ChainSafe/chaindb"

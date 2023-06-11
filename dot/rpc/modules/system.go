@@ -10,12 +10,12 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/crypto"
-	"github.com/ChainSafe/gossamer/pkg/scale"
 	"github.com/btcsuite/btcutil/base58"
 	ctypes "github.com/centrifuge/go-substrate-rpc-client/v4/types"
 	"github.com/centrifuge/go-substrate-rpc-client/v4/types/codec"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/crypto"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 // SystemModule is an RPC module providing access to core API points

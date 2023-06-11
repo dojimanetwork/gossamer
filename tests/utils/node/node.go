@@ -11,14 +11,14 @@ import (
 	"os/exec"
 	"testing"
 
-	"github.com/ChainSafe/gossamer/tests/utils/config"
+	"github.com/dojimanetwork/gossamer/tests/utils/config"
 
-	"github.com/ChainSafe/gossamer/lib/utils"
+	"github.com/dojimanetwork/gossamer/lib/utils"
 
 	"github.com/stretchr/testify/require"
 
-	cfg "github.com/ChainSafe/gossamer/config"
-	"github.com/ChainSafe/gossamer/tests/utils/pathfinder"
+	cfg "github.com/dojimanetwork/gossamer/config"
+	"github.com/dojimanetwork/gossamer/tests/utils/pathfinder"
 )
 
 // Node is a structure holding all the settings to

@@ -6,7 +6,7 @@ package grandpa
 import (
 	"errors"
 
-	"github.com/ChainSafe/gossamer/lib/blocktree"
+	"github.com/dojimanetwork/gossamer/lib/blocktree"
 )
 
 var (

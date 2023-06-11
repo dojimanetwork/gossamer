@@ -13,7 +13,7 @@ import (
 )
 
 // Replace all spaces in strings in test cases with underscores.
-// See https://github.com/ChainSafe/gossamer/issues/3039.
+// See https://github.com/dojimanetwork/gossamer/issues/3039.
 func main() {
 	err := filepath.WalkDir(".", walk)
 	if err != nil {

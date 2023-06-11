@@ -8,7 +8,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/ChainSafe/gossamer/internal/httpserver"
+	"github.com/dojimanetwork/gossamer/internal/httpserver"
 	"github.com/stretchr/testify/assert"
 )
 

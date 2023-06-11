@@ -13,7 +13,7 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ChainSafe/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/dot/types"
 )
 
 func createServiceHelper(t *testing.T, num int) []*Service {

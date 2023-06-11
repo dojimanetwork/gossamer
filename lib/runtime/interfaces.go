@@ -4,9 +4,9 @@
 package runtime
 
 import (
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/transaction"
-	"github.com/ChainSafe/gossamer/lib/trie"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/transaction"
+	"github.com/dojimanetwork/gossamer/lib/trie"
 )
 
 // Storage runtime interface.

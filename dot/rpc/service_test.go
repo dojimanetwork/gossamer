@@ -11,9 +11,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ChainSafe/gossamer/dot/rpc/modules"
-	"github.com/ChainSafe/gossamer/internal/log"
-	"github.com/ChainSafe/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/dot/rpc/modules"
+	"github.com/dojimanetwork/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/lib/common"
 	"github.com/gorilla/rpc/v2"
 	"github.com/stretchr/testify/require"
 )

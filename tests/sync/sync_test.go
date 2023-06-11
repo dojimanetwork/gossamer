@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/tests/utils"
-	"github.com/ChainSafe/gossamer/tests/utils/config"
+	"github.com/dojimanetwork/gossamer/tests/utils"
+	"github.com/dojimanetwork/gossamer/tests/utils/config"
 	"github.com/stretchr/testify/require"
 )
 

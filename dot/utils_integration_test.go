@@ -8,10 +8,10 @@ package dot
 import (
 	"testing"
 
-	westend_dev "github.com/ChainSafe/gossamer/chain/westend-dev"
+	westend_dev "github.com/dojimanetwork/gossamer/chain/westend-dev"
 
-	"github.com/ChainSafe/gossamer/lib/genesis"
-	"github.com/ChainSafe/gossamer/lib/trie"
+	"github.com/dojimanetwork/gossamer/lib/genesis"
+	"github.com/dojimanetwork/gossamer/lib/trie"
 	"github.com/stretchr/testify/require"
 )
 

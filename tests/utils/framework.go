@@ -9,10 +9,10 @@ import (
 	"strconv"
 	"testing"
 
-	cfg "github.com/ChainSafe/gossamer/config"
+	cfg "github.com/dojimanetwork/gossamer/config"
 
-	"github.com/ChainSafe/gossamer/tests/utils/node"
-	"github.com/ChainSafe/gossamer/tests/utils/rpc"
+	"github.com/dojimanetwork/gossamer/tests/utils/node"
+	"github.com/dojimanetwork/gossamer/tests/utils/rpc"
 	scribble "github.com/nanobox-io/golang-scribble"
 )
 

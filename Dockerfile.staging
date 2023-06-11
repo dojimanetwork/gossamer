@@ -17,7 +17,7 @@ COPY . .
 RUN ["sh", "-c", "mv .github/workflows/staging/openmetrics.d/${chain}-conf.yaml /etc/datadog-agent/conf.d/openmetrics.d/conf.yaml"]
 
 RUN go get ./...
-RUN go install -trimpath github.com/ChainSafe/gossamer/cmd/gossamer
+RUN go install -trimpath github.com/dojimanetwork/gossamer/cmd/gossamer
 
 RUN ["sh", "-c", "gossamer init --chain=${chain} --base-path=${basepath}/${chain}"]
 ENTRYPOINT ["sh", "-c", "service datadog-agent start && gossamer --chain=${chain} --base-path=${basepath}/${chain} --prometheus-external --prometheus-port=9876 --pprof.enabled --pprof.listening-address=\":6060\""]

@@ -8,11 +8,11 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/ChainSafe/gossamer/dot/state/pruner"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/genesis"
-	"github.com/ChainSafe/gossamer/lib/os"
-	"github.com/ChainSafe/gossamer/lib/runtime/wasmer"
+	"github.com/dojimanetwork/gossamer/dot/state/pruner"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/genesis"
+	"github.com/dojimanetwork/gossamer/lib/os"
+	"github.com/dojimanetwork/gossamer/lib/runtime/wasmer"
 )
 
 const (

@@ -6,7 +6,7 @@ package types
 import (
 	"fmt"
 
-	"github.com/ChainSafe/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/common"
 )
 
 // BlockData is stored within the BlockDB

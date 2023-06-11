@@ -14,21 +14,21 @@ supports, and the messages the `Handler` may receive & corresponding actions it 
 
 ## Handler
 
-The [digest `Handler`](https://pkg.go.dev/github.com/ChainSafe/gossamer/dot/digest#Handler) implements the
-[`Service` interface](https://pkg.go.dev/github.com/ChainSafe/gossamer/lib/services#Service), which means that it
+The [digest `Handler`](https://pkg.go.dev/github.com/dojimanetwork/gossamer/dot/digest#Handler) implements the
+[`Service` interface](https://pkg.go.dev/github.com/dojimanetwork/gossamer/lib/services#Service), which means that it
 exposes `Start` and `Stop` functions. When a
-[Gossamer `Node`](https://pkg.go.dev/github.com/ChainSafe/gossamer/dot#Node) is started, a digest `Handler` is created
-with the [`NewHandler`](https://pkg.go.dev/github.com/ChainSafe/gossamer/dot/digest#NewHandler) function and started
+[Gossamer `Node`](https://pkg.go.dev/github.com/dojimanetwork/gossamer/dot#Node) is started, a digest `Handler` is created
+with the [`NewHandler`](https://pkg.go.dev/github.com/dojimanetwork/gossamer/dot/digest#NewHandler) function and started
 along with the Gossamer node's other services. The digest `Handler` maintains two `goroutines`, `handleBlockImport` and
 `handleBlockFinalisation`, which handle imported and finalised blocks respectively - these `goroutines` listen for
 messages on channels provided by the
-[`BlockState`](https://pkg.go.dev/github.com/ChainSafe/gossamer/dot/state#BlockState).
+[`BlockState`](https://pkg.go.dev/github.com/dojimanetwork/gossamer/dot/state#BlockState).
 
 The digest `Handler` also exposes two public functions:
-[`NextGrandpaAuthorityChange`](https://pkg.go.dev/github.com/ChainSafe/gossamer/dot/digest#Handler.NextGrandpaAuthorityChange)
-and [`HandleDigests`](https://pkg.go.dev/github.com/ChainSafe/gossamer/dot/digest#Handler.HandleDigests).
+[`NextGrandpaAuthorityChange`](https://pkg.go.dev/github.com/dojimanetwork/gossamer/dot/digest#Handler.NextGrandpaAuthorityChange)
+and [`HandleDigests`](https://pkg.go.dev/github.com/dojimanetwork/gossamer/dot/digest#Handler.HandleDigests).
 `NextGrandpaAuthorityChange` is consumed by the
-[GRANDPA service](https://pkg.go.dev/github.com/ChainSafe/gossamer/lib/grandpa#Service) to determine the block number of
+[GRANDPA service](https://pkg.go.dev/github.com/dojimanetwork/gossamer/lib/grandpa#Service) to determine the block number of
 the next GRANDPA authority change.
 
 `HandleDigests` is invoked by the core service for each new block; this function reads the consensus digests from the

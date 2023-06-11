@@ -9,8 +9,8 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/trie"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/trie"
 	"golang.org/x/exp/maps"
 )
 
@@ -209,7 +209,7 @@ func (s *TrieState) DeleteChildLimit(key []byte, limit *[]byte) (
 		// If one deletion fails, the child trie and its parent trie are then in
 		// a bad intermediary state. Take also care of the caching of deleted Merkle
 		// values within the tries, which is used for online pruning.
-		// See https://github.com/ChainSafe/gossamer/issues/3032
+		// See https://github.com/dojimanetwork/gossamer/issues/3032
 		err = tr.Delete([]byte(k))
 		if err != nil {
 			return deleted, allDeleted, fmt.Errorf("deleting from child trie located at key 0x%x: %w", key, err)

@@ -6,21 +6,21 @@ package runtime
 import (
 	"fmt"
 
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 // UnknownTransaction is the child VDT of TransactionValidityError
 type UnknownTransaction scale.VaryingDataType
 
 // Index returns the VDT index
-func (UnknownTransaction) Index() uint { //skipcq: GO-W1029
+func (UnknownTransaction) Index() uint { // skipcq: GO-W1029
 	return 1
 }
 
-func (u UnknownTransaction) String() string { return u.Error() } //skipcq: GO-W1029
+func (u UnknownTransaction) String() string { return u.Error() } // skipcq: GO-W1029
 
 // Set will set a VaryingDataTypeValue using the underlying VaryingDataType
-func (u *UnknownTransaction) Set(val scale.VaryingDataTypeValue) (err error) { //skipcq: GO-W1029
+func (u *UnknownTransaction) Set(val scale.VaryingDataTypeValue) (err error) { // skipcq: GO-W1029
 	vdt := scale.VaryingDataType(*u)
 	err = vdt.Set(val)
 	if err != nil {
@@ -31,12 +31,12 @@ func (u *UnknownTransaction) Set(val scale.VaryingDataTypeValue) (err error) { /
 }
 
 // Value will return value from the underying VaryingDataType
-func (u *UnknownTransaction) Value() (val scale.VaryingDataTypeValue, err error) { //skipcq: GO-W1029
+func (u *UnknownTransaction) Value() (val scale.VaryingDataTypeValue, err error) { // skipcq: GO-W1029
 	vdt := scale.VaryingDataType(*u)
 	return vdt.Value()
 }
 
-func (u UnknownTransaction) Error() string { //skipcq: GO-W1029
+func (u UnknownTransaction) Error() string { // skipcq: GO-W1029
 	value, err := u.Value()
 	if err != nil {
 		return fmt.Sprintf("getting unknown transaction value: %s", err)

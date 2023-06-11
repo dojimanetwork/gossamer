@@ -6,8 +6,8 @@ package dot
 import (
 	"encoding/json"
 
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/services"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/services"
 )
 
 // service can be started and stopped.

@@ -6,7 +6,7 @@ package types
 import (
 	"fmt"
 
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 // Block defines a state block

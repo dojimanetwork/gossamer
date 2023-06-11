@@ -6,7 +6,7 @@ package runtime
 import (
 	"testing"
 
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -42,7 +42,7 @@ func Test_DecodeVersion(t *testing.T) {
 			errMessage: "decoding version field impl name: unknown prefix for compact uint: 255",
 		},
 		// TODO add transaction version decode error once
-		// https://github.com/ChainSafe/gossamer/pull/2683
+		// https://github.com/dojimanetwork/gossamer/pull/2683
 		// is merged.
 		// "transaction version decode error": {
 		// 	encoded: concatBytes([][]byte{
@@ -58,7 +58,7 @@ func Test_DecodeVersion(t *testing.T) {
 		// 	errMessage: "decoding transaction version: could not decode invalid integer",
 		// },
 		// TODO add state version decode error once
-		// https://github.com/ChainSafe/gossamer/pull/2683
+		// https://github.com/dojimanetwork/gossamer/pull/2683
 		// is merged.
 		// "state version decode error": {
 		// 	encoded: concatBytes([][]byte{

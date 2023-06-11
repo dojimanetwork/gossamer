@@ -6,10 +6,10 @@ package dot
 import (
 	"testing"
 
-	"github.com/ChainSafe/gossamer/chain/kusama"
-	cfg "github.com/ChainSafe/gossamer/config"
+	"github.com/dojimanetwork/gossamer/chain/kusama"
+	cfg "github.com/dojimanetwork/gossamer/config"
 
-	"github.com/ChainSafe/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/internal/log"
 	"github.com/stretchr/testify/assert"
 )
 

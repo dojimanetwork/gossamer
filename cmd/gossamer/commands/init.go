@@ -9,9 +9,9 @@ import (
 	"os"
 	"strings"
 
-	cfg "github.com/ChainSafe/gossamer/config"
+	cfg "github.com/dojimanetwork/gossamer/config"
 
-	"github.com/ChainSafe/gossamer/dot"
+	"github.com/dojimanetwork/gossamer/dot"
 	"github.com/spf13/cobra"
 )
 

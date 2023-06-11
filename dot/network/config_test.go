@@ -7,9 +7,9 @@ import (
 	"io"
 	"testing"
 
-	"github.com/ChainSafe/gossamer/dot/state"
+	"github.com/dojimanetwork/gossamer/dot/state"
 
-	"github.com/ChainSafe/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/internal/log"
 	"github.com/stretchr/testify/require"
 )
 

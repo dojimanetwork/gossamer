@@ -9,20 +9,20 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 var (
 	// ErrDecodeStorageValue is defined since no sentinel error is defined
 	// in the scale package.
 	// TODO remove once the following issue is done:
-	// https://github.com/ChainSafe/gossamer/issues/2631 .
+	// https://github.com/dojimanetwork/gossamer/issues/2631 .
 	ErrDecodeStorageValue = errors.New("cannot decode storage value")
 	ErrReadChildrenBitmap = errors.New("cannot read children bitmap")
 	// ErrDecodeChildHash is defined since no sentinel error is defined
 	// in the scale package.
 	// TODO remove once the following issue is done:
-	// https://github.com/ChainSafe/gossamer/issues/2631 .
+	// https://github.com/dojimanetwork/gossamer/issues/2631 .
 	ErrDecodeChildHash = errors.New("cannot decode child hash")
 )
 

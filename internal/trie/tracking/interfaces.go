@@ -3,7 +3,7 @@
 
 package tracking
 
-import "github.com/ChainSafe/gossamer/lib/common"
+import "github.com/dojimanetwork/gossamer/lib/common"
 
 // DeletedGetter gets deleted node hashes.
 type DeletedGetter interface {

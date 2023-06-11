@@ -7,7 +7,7 @@
 <!-- Detail how to run relevant tests to the changes -->
 
 ```sh
-go test -tags integration github.com/ChainSafe/gossamer
+go test -tags integration github.com/dojimanetwork/gossamer
 ```
 
 ## Issues

@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ChainSafe/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/common"
 )
 
 // PauseBABE calls the endpoint dev_control with the params ["babe", "stop"]

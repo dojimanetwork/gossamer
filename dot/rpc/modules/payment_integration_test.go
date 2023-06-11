@@ -9,14 +9,14 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/ChainSafe/gossamer/dot/rpc/modules/mocks"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/dot/rpc/modules/mocks"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ChainSafe/gossamer/lib/common"
-	mocksruntime "github.com/ChainSafe/gossamer/lib/runtime/mocks"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	mocksruntime "github.com/dojimanetwork/gossamer/lib/runtime/mocks"
 )
 
 func TestPaymentQueryInfo(t *testing.T) {

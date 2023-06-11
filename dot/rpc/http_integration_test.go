@@ -12,8 +12,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/dot/system"
-	"github.com/ChainSafe/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/dot/system"
+	"github.com/dojimanetwork/gossamer/dot/types"
 	"github.com/stretchr/testify/require"
 )
 

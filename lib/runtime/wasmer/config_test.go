@@ -6,7 +6,7 @@ package wasmer
 import (
 	"testing"
 
-	"github.com/ChainSafe/gossamer/lib/runtime"
+	"github.com/dojimanetwork/gossamer/lib/runtime"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

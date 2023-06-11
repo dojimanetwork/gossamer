@@ -4,10 +4,10 @@
 package modules
 
 import (
-	modulesmocks "github.com/ChainSafe/gossamer/dot/rpc/modules/mocks"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/runtime"
+	modulesmocks "github.com/dojimanetwork/gossamer/dot/rpc/modules/mocks"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/runtime"
 	"github.com/golang/mock/gomock"
 )
 

@@ -6,9 +6,9 @@ package inherents
 import (
 	"fmt"
 
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 // signature could be one of Ed25519 signature, Sr25519 signature or ECDSA/SECP256k1 signature.
@@ -40,31 +40,31 @@ func (va *validityAttestation) Value() (scale.VaryingDataTypeValue, error) {
 }
 
 // implicit is for implicit attestation.
-type implicit validatorSignature //skipcq
+type implicit validatorSignature // skipcq
 
 // Index returns VDT index
-func (implicit) Index() uint { //skipcq
+func (implicit) Index() uint { // skipcq
 	return 1
 }
 
-func (i implicit) String() string { //skipcq:SCC-U1000
+func (i implicit) String() string { // skipcq:SCC-U1000
 	return fmt.Sprintf("implicit(%s)", validatorSignature(i))
 }
 
 // explicit is for explicit attestation.
-type explicit validatorSignature //skipcq
+type explicit validatorSignature // skipcq
 
 // Index returns VDT index
-func (explicit) Index() uint { //skipcq
+func (explicit) Index() uint { // skipcq
 	return 2
 }
 
-func (e explicit) String() string { //skipcq:SCC-U1000
+func (e explicit) String() string { // skipcq:SCC-U1000
 	return fmt.Sprintf("explicit(%s)", validatorSignature(e))
 }
 
 // newValidityAttestation creates a ValidityAttestation varying data type.
-func newValidityAttestation() validityAttestation { //skipcq
+func newValidityAttestation() validityAttestation { // skipcq
 	vdt, err := scale.NewVaryingDataType(implicit{}, explicit{})
 	if err != nil {
 		panic(err)
@@ -98,19 +98,19 @@ func (d *disputeStatement) Value() (scale.VaryingDataTypeValue, error) {
 }
 
 // validDisputeStatementKind is a kind of statements of validity on a candidate.
-type validDisputeStatementKind scale.VaryingDataType //skipcq
+type validDisputeStatementKind scale.VaryingDataType // skipcq
 
 // Index returns VDT index
-func (validDisputeStatementKind) Index() uint { //skipcq
+func (validDisputeStatementKind) Index() uint { // skipcq
 	return 0
 }
 
-func (validDisputeStatementKind) String() string { //skipcq
+func (validDisputeStatementKind) String() string { // skipcq
 	return "valid dispute statement kind"
 }
 
 // Set will set a VaryingDataTypeValue using the underlying VaryingDataType
-func (v *validDisputeStatementKind) Set(val scale.VaryingDataTypeValue) (err error) { //skipcq
+func (v *validDisputeStatementKind) Set(val scale.VaryingDataTypeValue) (err error) { // skipcq
 	// cast to VaryingDataType to use VaryingDataType.Set method
 	vdt := scale.VaryingDataType(*v)
 	err = vdt.Set(val)
@@ -123,71 +123,71 @@ func (v *validDisputeStatementKind) Set(val scale.VaryingDataTypeValue) (err err
 }
 
 // Value will return value from underying VaryingDataType
-func (v *validDisputeStatementKind) Value() (scale.VaryingDataTypeValue, error) { //skipcq
+func (v *validDisputeStatementKind) Value() (scale.VaryingDataTypeValue, error) { // skipcq
 	vdt := scale.VaryingDataType(*v)
 	return vdt.Value()
 }
 
 // ExplicitValidDisputeStatementKind is an explicit statement issued as part of a dispute.
-type explicitValidDisputeStatementKind struct{} //skipcq
+type explicitValidDisputeStatementKind struct{} // skipcq
 
 // Index returns VDT index
-func (explicitValidDisputeStatementKind) Index() uint { //skipcq
+func (explicitValidDisputeStatementKind) Index() uint { // skipcq
 	return 0
 }
 
-func (explicitValidDisputeStatementKind) String() string { //skipcq:SCC-U1000
+func (explicitValidDisputeStatementKind) String() string { // skipcq:SCC-U1000
 	return "explicit valid dispute statement kind"
 }
 
 // backingSeconded is a seconded statement on a candidate from the backing phase.
-type backingSeconded common.Hash //skipcq
+type backingSeconded common.Hash // skipcq
 
 // Index returns VDT index
-func (backingSeconded) Index() uint { //skipcq
+func (backingSeconded) Index() uint { // skipcq
 	return 1
 }
 
-func (b backingSeconded) String() string { //skipcq:SCC-U1000
+func (b backingSeconded) String() string { // skipcq:SCC-U1000
 	return fmt.Sprintf("backingSeconded(%s)", common.Hash(b))
 }
 
 // backingValid is a valid statement on a candidate from the backing phase.
-type backingValid common.Hash //skipcq
+type backingValid common.Hash // skipcq
 
 // Index returns VDT index
-func (backingValid) Index() uint { //skipcq
+func (backingValid) Index() uint { // skipcq
 	return 2
 }
 
-func (b backingValid) String() string { //skipcq:SCC-U1000
+func (b backingValid) String() string { // skipcq:SCC-U1000
 	return fmt.Sprintf("backingValid(%s)", common.Hash(b))
 }
 
 // approvalChecking is an approval vote from the approval checking phase.
-type approvalChecking struct{} //skipcq
+type approvalChecking struct{} // skipcq
 
 // Index returns VDT index
-func (approvalChecking) Index() uint { //skipcq
+func (approvalChecking) Index() uint { // skipcq
 	return 3
 }
 
 func (approvalChecking) String() string { return "approval checking" }
 
 // invalidDisputeStatementKind is a kind of statements of invalidity on a candidate.
-type invalidDisputeStatementKind scale.VaryingDataType //skipcq
+type invalidDisputeStatementKind scale.VaryingDataType // skipcq
 
 // Index returns VDT index
-func (invalidDisputeStatementKind) Index() uint { //skipcq
+func (invalidDisputeStatementKind) Index() uint { // skipcq
 	return 1
 }
 
-func (invalidDisputeStatementKind) String() string { //skipcq
+func (invalidDisputeStatementKind) String() string { // skipcq
 	return "invalid dispute statement kind"
 }
 
 // Set will set a VaryingDataTypeValue using the underlying VaryingDataType
-func (in *invalidDisputeStatementKind) Set(val scale.VaryingDataTypeValue) (err error) { //skipcq
+func (in *invalidDisputeStatementKind) Set(val scale.VaryingDataTypeValue) (err error) { // skipcq
 	// cast to VaryingDataType to use VaryingDataType.Set method
 	vdt := scale.VaryingDataType(*in)
 	err = vdt.Set(val)
@@ -200,25 +200,25 @@ func (in *invalidDisputeStatementKind) Set(val scale.VaryingDataTypeValue) (err 
 }
 
 // Value will return value from underying VaryingDataType
-func (in *invalidDisputeStatementKind) Value() (scale.VaryingDataTypeValue, error) { //skipcq
+func (in *invalidDisputeStatementKind) Value() (scale.VaryingDataTypeValue, error) { // skipcq
 	vdt := scale.VaryingDataType(*in)
 	return vdt.Value()
 }
 
 // explicitInvalidDisputeStatementKind is an explicit statement issued as part of a dispute.
-type explicitInvalidDisputeStatementKind struct{} //skipcq
+type explicitInvalidDisputeStatementKind struct{} // skipcq
 
 // Index returns VDT index
-func (explicitInvalidDisputeStatementKind) Index() uint { //skipcq
+func (explicitInvalidDisputeStatementKind) Index() uint { // skipcq
 	return 0
 }
 
-func (explicitInvalidDisputeStatementKind) String() string { //skipcq:SCC-U1000
+func (explicitInvalidDisputeStatementKind) String() string { // skipcq:SCC-U1000
 	return "explicit invalid dispute statement kind"
 }
 
 // newDisputeStatement create a new DisputeStatement varying data type.
-func newDisputeStatement() disputeStatement { //skipcq
+func newDisputeStatement() disputeStatement { // skipcq
 	idsKind, err := scale.NewVaryingDataType(explicitInvalidDisputeStatementKind{})
 	if err != nil {
 		panic(err)

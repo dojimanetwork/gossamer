@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/internal/httpserver"
+	"github.com/dojimanetwork/gossamer/internal/httpserver"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

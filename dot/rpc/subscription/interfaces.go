@@ -4,11 +4,11 @@
 package subscription
 
 import (
-	"github.com/ChainSafe/gossamer/dot/state"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/runtime"
-	"github.com/ChainSafe/gossamer/lib/transaction"
+	"github.com/dojimanetwork/gossamer/dot/state"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/runtime"
+	"github.com/dojimanetwork/gossamer/lib/transaction"
 )
 
 // StorageAPI is the interface for the storage state

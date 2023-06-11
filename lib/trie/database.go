@@ -7,9 +7,9 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/ChainSafe/gossamer/internal/trie/codec"
-	"github.com/ChainSafe/gossamer/internal/trie/node"
-	"github.com/ChainSafe/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/internal/trie/codec"
+	"github.com/dojimanetwork/gossamer/internal/trie/node"
+	"github.com/dojimanetwork/gossamer/lib/common"
 
 	"github.com/ChainSafe/chaindb"
 )
@@ -141,7 +141,7 @@ func PopulateNodeHashes(n *Node, nodeHashes map[common.Hash]struct{}) {
 	switch {
 	case len(n.MerkleValue) == 0:
 		// TODO remove once lazy loading of nodes is implemented
-		// https://github.com/ChainSafe/gossamer/issues/2838
+		// https://github.com/dojimanetwork/gossamer/issues/2838
 		panic(fmt.Sprintf("node with partial key 0x%x has no Merkle value computed", n.PartialKey))
 	case len(n.MerkleValue) < 32:
 		// Inlined node where its Merkle value is its

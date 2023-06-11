@@ -13,16 +13,16 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/dot/rpc/modules"
-	"github.com/ChainSafe/gossamer/dot/rpc/modules/mocks"
-	"github.com/ChainSafe/gossamer/dot/state"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/grandpa"
-	"github.com/ChainSafe/gossamer/lib/runtime"
-	"github.com/ChainSafe/gossamer/lib/runtime/wasmer"
-	"github.com/ChainSafe/gossamer/lib/transaction"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/dot/rpc/modules"
+	"github.com/dojimanetwork/gossamer/dot/rpc/modules/mocks"
+	"github.com/dojimanetwork/gossamer/dot/state"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/grandpa"
+	"github.com/dojimanetwork/gossamer/lib/runtime"
+	"github.com/dojimanetwork/gossamer/lib/runtime/wasmer"
+	"github.com/dojimanetwork/gossamer/lib/transaction"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 	gomock "github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/require"
 )
@@ -96,7 +96,7 @@ func TestBlockListener_Listen(t *testing.T) {
 		cancelTimeout: time.Second * 5,
 	}
 
-	//block := types.NewEmptyBlock()
+	// block := types.NewEmptyBlock()
 	block := types.NewBlock(*types.NewEmptyHeader(), *new(types.Body))
 	block.Header.Number = 1
 
@@ -355,7 +355,7 @@ func TestRuntimeChannelListener_Listen(t *testing.T) {
 
 	go rvl.Listen()
 
-	//check initial response
+	// check initial response
 	time.Sleep(time.Millisecond * 10)
 	require.Equal(t, expectedInitialResponse, mockConnection.lastMessage)
 

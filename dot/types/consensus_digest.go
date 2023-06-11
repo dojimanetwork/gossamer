@@ -6,7 +6,7 @@ package types
 import (
 	"fmt"
 
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 // NewBabeConsensusDigest constructs a vdt representing a babe consensus digest
@@ -95,14 +95,14 @@ type NextEpochData struct {
 }
 
 // Index returns VDT index
-func (NextEpochData) Index() uint { return 1 } //skipcq: GO-W1029
+func (NextEpochData) Index() uint { return 1 } // skipcq: GO-W1029
 
-func (d NextEpochData) String() string { //skipcq: GO-W1029
+func (d NextEpochData) String() string { // skipcq: GO-W1029
 	return fmt.Sprintf("NextEpochData Authorities=%v Randomness=%v", d.Authorities, d.Randomness)
 }
 
 // ToEpochData returns the NextEpochData as EpochData
-func (d *NextEpochData) ToEpochData() (*EpochData, error) { //skipcq: GO-W1029
+func (d *NextEpochData) ToEpochData() (*EpochData, error) { // skipcq: GO-W1029
 	auths, err := BABEAuthorityRawToAuthority(d.Authorities)
 	if err != nil {
 		return nil, err
@@ -135,15 +135,15 @@ type NextConfigDataV1 struct {
 }
 
 // Index returns VDT index
-func (NextConfigDataV1) Index() uint { return 1 } //skipcq: GO-W1029
+func (NextConfigDataV1) Index() uint { return 1 } // skipcq: GO-W1029
 
-func (d NextConfigDataV1) String() string { //skipcq: GO-W1029
+func (d NextConfigDataV1) String() string { // skipcq: GO-W1029
 	return fmt.Sprintf("NextConfigData{C1=%d, C2=%d, SecondarySlots=%d}",
 		d.C1, d.C2, d.SecondarySlots)
 }
 
 // ToConfigData returns the NextConfigData as ConfigData
-func (d *NextConfigDataV1) ToConfigData() *ConfigData { //skipcq: GO-W1029
+func (d *NextConfigDataV1) ToConfigData() *ConfigData { // skipcq: GO-W1029
 	return &ConfigData{
 		C1:             d.C1,
 		C2:             d.C2,

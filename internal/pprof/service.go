@@ -8,7 +8,7 @@ import (
 	"errors"
 	"runtime"
 
-	cfg "github.com/ChainSafe/gossamer/config"
+	cfg "github.com/dojimanetwork/gossamer/config"
 )
 
 // Service is a pprof http server service compatible with the

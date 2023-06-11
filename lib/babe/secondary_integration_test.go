@@ -8,7 +8,7 @@ package babe
 import (
 	"testing"
 
-	"github.com/ChainSafe/gossamer/lib/crypto/sr25519"
+	"github.com/dojimanetwork/gossamer/lib/crypto/sr25519"
 
 	"github.com/stretchr/testify/require"
 )

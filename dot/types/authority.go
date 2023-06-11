@@ -8,10 +8,10 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/crypto"
-	"github.com/ChainSafe/gossamer/lib/crypto/ed25519"
-	"github.com/ChainSafe/gossamer/lib/crypto/sr25519"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/crypto"
+	"github.com/dojimanetwork/gossamer/lib/crypto/ed25519"
+	"github.com/dojimanetwork/gossamer/lib/crypto/sr25519"
 )
 
 // Authority struct to hold authority data

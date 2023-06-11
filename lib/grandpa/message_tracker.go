@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ChainSafe/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/dot/types"
 	"github.com/libp2p/go-libp2p/core/peer"
 )
 

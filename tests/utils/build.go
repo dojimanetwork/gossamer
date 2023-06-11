@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"os/exec"
 
-	libutils "github.com/ChainSafe/gossamer/lib/utils"
+	libutils "github.com/dojimanetwork/gossamer/lib/utils"
 )
 
 // BuildGossamer finds the project root path and builds the Gossamer

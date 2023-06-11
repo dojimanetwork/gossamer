@@ -9,11 +9,11 @@ import (
 	"os"
 
 	"github.com/ChainSafe/chaindb"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/trie"
-	"github.com/ChainSafe/gossamer/lib/utils"
 	"github.com/dgraph-io/badger/v2"
 	"github.com/dgraph-io/badger/v2/pb"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/trie"
+	"github.com/dojimanetwork/gossamer/lib/utils"
 )
 
 // OfflinePruner is a tool to prune the stale state with the help of

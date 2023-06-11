@@ -10,13 +10,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/crypto/sr25519"
-	"github.com/ChainSafe/gossamer/lib/keystore"
-	"github.com/ChainSafe/gossamer/lib/runtime"
-	"github.com/ChainSafe/gossamer/lib/transaction"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/crypto/sr25519"
+	"github.com/dojimanetwork/gossamer/lib/keystore"
+	"github.com/dojimanetwork/gossamer/lib/runtime"
+	"github.com/dojimanetwork/gossamer/lib/transaction"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 
 	cscale "github.com/centrifuge/go-substrate-rpc-client/v4/scale"
 	"github.com/centrifuge/go-substrate-rpc-client/v4/signature"
@@ -183,7 +183,7 @@ func TestBuildAndApplyExtrinsic(t *testing.T) {
 	rt, err := babeService.blockState.GetRuntime(bestBlockHash)
 	require.NoError(t, err)
 
-	//initialise block header
+	// initialise block header
 	err = rt.InitializeBlock(header)
 	require.NoError(t, err)
 

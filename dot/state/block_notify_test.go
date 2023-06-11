@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/runtime"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/runtime"
 	"github.com/stretchr/testify/require"
 )
 

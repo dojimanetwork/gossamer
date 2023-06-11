@@ -3,7 +3,7 @@
 
 package keystore
 
-import "github.com/ChainSafe/gossamer/lib/crypto"
+import "github.com/dojimanetwork/gossamer/lib/crypto"
 
 // KeyPair is a key pair to sign messages and from which
 // the public key and key type can be obtained.

@@ -6,8 +6,8 @@ package blocktree
 import (
 	"sync"
 
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/runtime"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/runtime"
 	"golang.org/x/exp/maps"
 )
 

@@ -6,8 +6,8 @@ package proof
 import (
 	"testing"
 
-	"github.com/ChainSafe/gossamer/internal/trie/node"
-	"github.com/ChainSafe/gossamer/lib/trie"
+	"github.com/dojimanetwork/gossamer/internal/trie/node"
+	"github.com/dojimanetwork/gossamer/lib/trie"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

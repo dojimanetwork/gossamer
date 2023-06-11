@@ -8,10 +8,10 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/crypto/sr25519"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/crypto/sr25519"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 var errEmptyKeyOwnershipProof = errors.New("key ownership proof is nil")
@@ -347,7 +347,7 @@ func (b *verifier) submitAndReportEquivocation(
 	// TODO: Check if it is initial sync
 	// don't report any equivocations during initial sync
 	// as they are most likely stale.
-	// https://github.com/ChainSafe/gossamer/issues/3004
+	// https://github.com/dojimanetwork/gossamer/issues/3004
 
 	bestBlockHash := b.blockState.BestBlockHash()
 	runtimeInstance, err := b.blockState.GetRuntime(bestBlockHash)

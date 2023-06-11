@@ -8,7 +8,7 @@ import (
 	"errors"
 	"testing"
 
-	westenddev "github.com/ChainSafe/gossamer/chain/westend-dev"
+	westenddev "github.com/dojimanetwork/gossamer/chain/westend-dev"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

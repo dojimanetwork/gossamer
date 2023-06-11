@@ -7,8 +7,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/crypto/sr25519"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/crypto/sr25519"
 )
 
 // initiateEpoch sets the epochData for the given epoch, runs the lottery for the slots in the epoch,

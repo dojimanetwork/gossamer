@@ -15,22 +15,22 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/ChainSafe/gossamer/chain/kusama"
-	"github.com/ChainSafe/gossamer/chain/polkadot"
-	"github.com/ChainSafe/gossamer/chain/westend"
-	westenddev "github.com/ChainSafe/gossamer/chain/westend-dev"
-	westendlocal "github.com/ChainSafe/gossamer/chain/westend-local"
-	gssmros "github.com/ChainSafe/gossamer/lib/os"
+	"github.com/dojimanetwork/gossamer/chain/kusama"
+	"github.com/dojimanetwork/gossamer/chain/polkadot"
+	"github.com/dojimanetwork/gossamer/chain/westend"
+	westenddev "github.com/dojimanetwork/gossamer/chain/westend-dev"
+	westendlocal "github.com/dojimanetwork/gossamer/chain/westend-local"
+	gssmros "github.com/dojimanetwork/gossamer/lib/os"
 
-	"github.com/ChainSafe/gossamer/lib/genesis"
+	"github.com/dojimanetwork/gossamer/lib/genesis"
 
 	terminal "golang.org/x/term"
 
-	cfg "github.com/ChainSafe/gossamer/config"
+	cfg "github.com/dojimanetwork/gossamer/config"
 
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/keystore"
-	"github.com/ChainSafe/gossamer/lib/utils"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/keystore"
+	"github.com/dojimanetwork/gossamer/lib/utils"
 
 	"github.com/spf13/viper"
 )
@@ -343,7 +343,7 @@ func parseAccount() {
 func parseRPC() {
 	// if rpc modules is not set, set it to the default
 	// if rpc modules is set to unsafe, set it to all modules
-	//TODO: refactor this to follow the same pattern as substrate
+	// TODO: refactor this to follow the same pattern as substrate
 	// Substrate accepts `unsafe`,`safe` and `auto` for --rpc-methods
 	if rpcModules == "unsafe" || rpcModules == "" {
 		config.RPC.Modules = cfg.DefaultRPCModules

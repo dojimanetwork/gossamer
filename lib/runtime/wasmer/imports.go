@@ -98,7 +98,7 @@ package wasmer
 //
 // extern void ext_transaction_index_index_version_1(void *context, int32_t a, int32_t b, int32_t c);
 // extern void ext_transaction_index_renew_version_1(void *context, int32_t a, int32_t b);
-import "C" //skipcq: SCC-compile
+import "C" // skipcq: SCC-compile
 
 import (
 	"encoding/binary"
@@ -109,16 +109,16 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/crypto"
-	"github.com/ChainSafe/gossamer/lib/crypto/ed25519"
-	"github.com/ChainSafe/gossamer/lib/crypto/secp256k1"
-	"github.com/ChainSafe/gossamer/lib/crypto/sr25519"
-	"github.com/ChainSafe/gossamer/lib/runtime"
-	"github.com/ChainSafe/gossamer/lib/transaction"
-	"github.com/ChainSafe/gossamer/lib/trie"
-	"github.com/ChainSafe/gossamer/lib/trie/proof"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/crypto"
+	"github.com/dojimanetwork/gossamer/lib/crypto/ed25519"
+	"github.com/dojimanetwork/gossamer/lib/crypto/secp256k1"
+	"github.com/dojimanetwork/gossamer/lib/crypto/sr25519"
+	"github.com/dojimanetwork/gossamer/lib/runtime"
+	"github.com/dojimanetwork/gossamer/lib/transaction"
+	"github.com/dojimanetwork/gossamer/lib/trie"
+	"github.com/dojimanetwork/gossamer/lib/trie/proof"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 
 	wasm "github.com/wasmerio/go-ext-wasm/wasmer"
 )

@@ -7,9 +7,9 @@ import (
 	"context"
 	"testing"
 
-	libutils "github.com/ChainSafe/gossamer/lib/utils"
-	"github.com/ChainSafe/gossamer/tests/utils/config"
-	"github.com/ChainSafe/gossamer/tests/utils/node"
+	libutils "github.com/dojimanetwork/gossamer/lib/utils"
+	"github.com/dojimanetwork/gossamer/tests/utils/config"
+	"github.com/dojimanetwork/gossamer/tests/utils/node"
 )
 
 func TestOffchainRPC(t *testing.T) { //nolint:tparallel

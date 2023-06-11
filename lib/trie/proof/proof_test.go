@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	"github.com/ChainSafe/chaindb"
-	"github.com/ChainSafe/gossamer/lib/trie"
+	"github.com/dojimanetwork/gossamer/lib/trie"
 	"github.com/stretchr/testify/require"
 )
 

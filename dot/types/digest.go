@@ -6,7 +6,7 @@ package types
 import (
 	"fmt"
 
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 // DigestItem is a varying date type that holds type identifier and a scaled encoded message payload.

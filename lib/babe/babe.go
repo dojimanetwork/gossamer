@@ -11,10 +11,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ChainSafe/gossamer/dot/telemetry"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/internal/log"
-	"github.com/ChainSafe/gossamer/lib/crypto/sr25519"
+	"github.com/dojimanetwork/gossamer/dot/telemetry"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/lib/crypto/sr25519"
 
 	ethmetrics "github.com/ethereum/go-ethereum/metrics"
 )

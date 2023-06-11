@@ -6,9 +6,9 @@ package sync
 import (
 	"testing"
 
-	"github.com/ChainSafe/gossamer/dot/network"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/dot/network"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/common"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 )

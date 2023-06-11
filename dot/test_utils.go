@@ -9,10 +9,10 @@ import (
 	"path/filepath"
 	"testing"
 
-	cfg "github.com/ChainSafe/gossamer/config"
+	cfg "github.com/dojimanetwork/gossamer/config"
 
-	"github.com/ChainSafe/gossamer/lib/genesis"
-	"github.com/ChainSafe/gossamer/lib/utils"
+	"github.com/dojimanetwork/gossamer/lib/genesis"
+	"github.com/dojimanetwork/gossamer/lib/utils"
 	"github.com/stretchr/testify/require"
 )
 

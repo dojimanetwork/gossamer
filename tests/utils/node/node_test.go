@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/tests/utils/config"
+	"github.com/dojimanetwork/gossamer/tests/utils/config"
 )
 
 func Test_Node_InitAndStartTest(t *testing.T) {

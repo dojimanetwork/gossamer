@@ -7,8 +7,8 @@ import (
 	"container/list"
 	"sync"
 
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/crypto/ed25519"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/crypto/ed25519"
 	"github.com/libp2p/go-libp2p/core/peer"
 )
 

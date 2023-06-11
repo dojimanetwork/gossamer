@@ -7,7 +7,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/ChainSafe/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/dot/types"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 )

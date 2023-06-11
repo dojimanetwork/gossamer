@@ -6,8 +6,8 @@ package config
 import (
 	"time"
 
-	cfg "github.com/ChainSafe/gossamer/config"
-	"github.com/ChainSafe/gossamer/lib/runtime/wasmer"
+	cfg "github.com/dojimanetwork/gossamer/config"
+	"github.com/dojimanetwork/gossamer/lib/runtime/wasmer"
 )
 
 // Default returns a default TOML configuration for Gossamer.

@@ -10,13 +10,13 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/ChainSafe/gossamer/dot/state"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/trie"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/dot/state"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/trie"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 
-	"github.com/ChainSafe/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/internal/log"
 )
 
 // ImportState imports the state in the given files to the database with the given path.

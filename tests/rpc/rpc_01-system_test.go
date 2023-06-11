@@ -8,12 +8,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/dot/rpc/modules"
-	"github.com/ChainSafe/gossamer/lib/common"
-	libutils "github.com/ChainSafe/gossamer/lib/utils"
-	"github.com/ChainSafe/gossamer/tests/utils/config"
-	"github.com/ChainSafe/gossamer/tests/utils/node"
-	"github.com/ChainSafe/gossamer/tests/utils/retry"
+	"github.com/dojimanetwork/gossamer/dot/rpc/modules"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	libutils "github.com/dojimanetwork/gossamer/lib/utils"
+	"github.com/dojimanetwork/gossamer/tests/utils/config"
+	"github.com/dojimanetwork/gossamer/tests/utils/node"
+	"github.com/dojimanetwork/gossamer/tests/utils/retry"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -121,7 +121,7 @@ func TestSystemRPC(t *testing.T) { //nolint:tparallel
 			assert.Regexp(t, peerIDRegex, response[i].PeerID)
 			response[i].PeerID = ""
 			// TODO assert these are all the same,
-			// see https://github.com/ChainSafe/gossamer/issues/2498
+			// see https://github.com/dojimanetwork/gossamer/issues/2498
 			response[i].BestHash = common.Hash{}
 			response[i].BestNumber = 0
 		}

@@ -6,10 +6,10 @@ package wasmer
 import (
 	"testing"
 
-	"github.com/ChainSafe/gossamer/internal/log"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/keystore"
-	"github.com/ChainSafe/gossamer/lib/runtime"
+	"github.com/dojimanetwork/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/keystore"
+	"github.com/dojimanetwork/gossamer/lib/runtime"
 )
 
 // Config is the configuration used to create a Wasmer runtime instance.

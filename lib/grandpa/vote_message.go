@@ -8,11 +8,11 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ChainSafe/gossamer/dot/telemetry"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/blocktree"
-	"github.com/ChainSafe/gossamer/lib/crypto/ed25519"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/dot/telemetry"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/blocktree"
+	"github.com/dojimanetwork/gossamer/lib/crypto/ed25519"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 
 	"github.com/libp2p/go-libp2p/core/peer"
 )
@@ -101,14 +101,14 @@ func (s *Service) validateVoteMessage(from peer.ID, m *VoteMessage) (*Vote, erro
 	pk, err := ed25519.NewPublicKey(m.Message.AuthorityID[:])
 	if err != nil {
 		// TODO Affect peer reputation
-		// https://github.com/ChainSafe/gossamer/issues/2505
+		// https://github.com/dojimanetwork/gossamer/issues/2505
 		return nil, fmt.Errorf("creating public key: %w", err)
 	}
 
 	err = validateMessageSignature(pk, m)
 	if err != nil {
 		// TODO Affect peer reputation
-		// https://github.com/ChainSafe/gossamer/issues/2505
+		// https://github.com/dojimanetwork/gossamer/issues/2505
 		return nil, fmt.Errorf("validating message signature: %w", err)
 	}
 
@@ -129,7 +129,7 @@ func (s *Service) validateVoteMessage(from peer.ID, m *VoteMessage) (*Vote, erro
 	if m.Round < minRoundAccepted || m.Round > maxRoundAccepted {
 		// Discard message
 		// TODO: affect peer reputation, this is shameful impolite behaviour
-		// https://github.com/ChainSafe/gossamer/issues/2505
+		// https://github.com/dojimanetwork/gossamer/issues/2505
 		return nil, fmt.Errorf("%w: received round: %d, round should be between: <%d, %d>",
 			errRoundOutOfBounds, m.Round, minRoundAccepted, maxRoundAccepted)
 	}

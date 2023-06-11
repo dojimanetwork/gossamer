@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	"github.com/ChainSafe/chaindb"
-	"github.com/ChainSafe/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/common"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

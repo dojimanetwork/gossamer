@@ -6,11 +6,11 @@ package grandpa
 import (
 	"testing"
 
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/crypto/ed25519"
-	"github.com/ChainSafe/gossamer/lib/keystore"
-	"github.com/ChainSafe/gossamer/lib/trie"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/crypto/ed25519"
+	"github.com/dojimanetwork/gossamer/lib/keystore"
+	"github.com/dojimanetwork/gossamer/lib/trie"
 	"github.com/stretchr/testify/require"
 )
 

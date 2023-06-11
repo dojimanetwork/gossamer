@@ -11,11 +11,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/internal/log"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/tests/utils/node"
-	"github.com/ChainSafe/gossamer/tests/utils/retry"
-	"github.com/ChainSafe/gossamer/tests/utils/rpc"
+	"github.com/dojimanetwork/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/tests/utils/node"
+	"github.com/dojimanetwork/gossamer/tests/utils/retry"
+	"github.com/dojimanetwork/gossamer/tests/utils/rpc"
 
 	"github.com/stretchr/testify/require"
 )

@@ -11,10 +11,10 @@ import (
 	"path/filepath"
 	"testing"
 
-	westend_dev "github.com/ChainSafe/gossamer/chain/westend-dev"
-	cfg "github.com/ChainSafe/gossamer/config"
-	"github.com/ChainSafe/gossamer/lib/genesis"
-	"github.com/ChainSafe/gossamer/lib/utils"
+	westend_dev "github.com/dojimanetwork/gossamer/chain/westend-dev"
+	cfg "github.com/dojimanetwork/gossamer/config"
+	"github.com/dojimanetwork/gossamer/lib/genesis"
+	"github.com/dojimanetwork/gossamer/lib/utils"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

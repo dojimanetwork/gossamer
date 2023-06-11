@@ -8,12 +8,12 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/ChainSafe/gossamer/dot/state"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/babe/mocks"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/crypto/sr25519"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/dot/state"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/babe/mocks"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/crypto/sr25519"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -115,7 +115,7 @@ func Test_getAuthorityIndex(t *testing.T) {
 	headerPrimary := types.NewEmptyHeader()
 	headerPrimary.Digest = digestPrimary
 
-	//BabeSecondaryVRFPreDigest Case
+	// BabeSecondaryVRFPreDigest Case
 	babeDigest2 := types.NewBabeDigest()
 	err = babeDigest2.Set(types.BabeSecondaryVRFPreDigest{AuthorityIndex: 21})
 	assert.NoError(t, err)
@@ -132,7 +132,7 @@ func Test_getAuthorityIndex(t *testing.T) {
 	headerSecondary := types.NewEmptyHeader()
 	headerSecondary.Digest = digestSecondary
 
-	//BabeSecondaryPlainPreDigest case
+	// BabeSecondaryPlainPreDigest case
 	babeDigest3 := types.NewBabeDigest()
 	err = babeDigest3.Set(types.BabeSecondaryPlainPreDigest{AuthorityIndex: 21})
 	assert.NoError(t, err)
@@ -207,7 +207,7 @@ func Test_verifier_verifyPrimarySlotWinner(t *testing.T) {
 	ctrl := gomock.NewController(t)
 	mockBlockState := NewMockBlockState(ctrl)
 
-	//Generate keys
+	// Generate keys
 	kp, err := sr25519.GenerateKeypair()
 	assert.NoError(t, err)
 
@@ -289,11 +289,11 @@ func Test_verifier_verifyPreRuntimeDigest(t *testing.T) {
 	ctrl := gomock.NewController(t)
 	mockBlockState := NewMockBlockState(ctrl)
 
-	//Generate keys
+	// Generate keys
 	kp, err := sr25519.GenerateKeypair()
 	assert.NoError(t, err)
 
-	//BabePrimaryPreDigest case
+	// BabePrimaryPreDigest case
 	output, proof, err := kp.VrfSign(makeTranscript(Randomness{}, uint64(1), 1))
 	assert.NoError(t, err)
 
@@ -324,7 +324,7 @@ func Test_verifier_verifyPreRuntimeDigest(t *testing.T) {
 
 	v1 := newVerifier(mockBlockState, 1, vi1)
 
-	//BabeSecondaryVRFPreDigest case
+	// BabeSecondaryVRFPreDigest case
 	secVRFDigest := types.BabeSecondaryVRFPreDigest{
 		SlotNumber: 1,
 		VrfOutput:  output,
@@ -355,7 +355,7 @@ func Test_verifier_verifyPreRuntimeDigest(t *testing.T) {
 	vVRFSec := newVerifier(mockBlockState, 1, viVRFSec)
 	vVRFSec2 := newVerifier(mockBlockState, 1, viVRFSec2)
 
-	//BabeSecondaryPlainPreDigest case
+	// BabeSecondaryPlainPreDigest case
 	secDigest := types.BabeSecondaryPlainPreDigest{AuthorityIndex: 0, SlotNumber: uint64(1)}
 	prd, err := secDigest.ToPreRuntimeDigest()
 	assert.NoError(t, err)
@@ -464,7 +464,7 @@ func Test_verifier_verifyAuthorshipRight(t *testing.T) {
 	mockBlockState := NewMockBlockState(ctrl)
 	mockBlockStateErr := NewMockBlockState(ctrl)
 
-	//Generate keys
+	// Generate keys
 	kp, err := sr25519.GenerateKeypair()
 	assert.NoError(t, err)
 
@@ -590,7 +590,7 @@ func Test_verifier_verifyAuthorshipRight(t *testing.T) {
 	signAndAddSeal(t, kp, header7, hash[:])
 	babeVerifier5 := newTestVerifier(kp, mockBlockState, scale.MaxUint128, false)
 
-	//// Case 8: Get header error
+	// // Case 8: Get header error
 	babeVerifier6 := newTestVerifier(kp, mockBlockStateErr, scale.MaxUint128, false)
 
 	tests := []struct {
@@ -941,7 +941,7 @@ func Test_verifier_verifyAuthorshipRightEquivocatory(t *testing.T) {
 	mockBlockStateEquiv2 := NewMockBlockState(ctrl)
 	mockBlockStateEquiv3 := NewMockBlockState(ctrl)
 
-	//Generate keys
+	// Generate keys
 	kp, err := sr25519.GenerateKeypair()
 	assert.NoError(t, err)
 
@@ -1180,7 +1180,7 @@ func TestVerificationManager_getVerifierInfo(t *testing.T) {
 }
 
 func TestVerificationManager_VerifyBlock(t *testing.T) {
-	//Generate keys
+	// Generate keys
 	kp, err := sr25519.GenerateKeypair()
 	assert.NoError(t, err)
 
@@ -1334,7 +1334,7 @@ func TestVerificationManager_VerifyBlock(t *testing.T) {
 }
 
 func TestVerificationManager_SetOnDisabled(t *testing.T) {
-	//Generate keys
+	// Generate keys
 	kp, err := sr25519.GenerateKeypair()
 	assert.NoError(t, err)
 

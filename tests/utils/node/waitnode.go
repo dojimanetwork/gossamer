@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ChainSafe/gossamer/tests/utils/retry"
-	"github.com/ChainSafe/gossamer/tests/utils/rpc"
+	"github.com/dojimanetwork/gossamer/tests/utils/retry"
+	"github.com/dojimanetwork/gossamer/tests/utils/rpc"
 )
 
 func waitForNode(ctx context.Context, rpcPort string) (err error) {

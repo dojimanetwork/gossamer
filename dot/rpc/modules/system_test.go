@@ -8,11 +8,11 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/ChainSafe/gossamer/dot/rpc/modules/mocks"
-	testdata "github.com/ChainSafe/gossamer/dot/rpc/modules/test_data"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/transaction"
+	"github.com/dojimanetwork/gossamer/dot/rpc/modules/mocks"
+	testdata "github.com/dojimanetwork/gossamer/dot/rpc/modules/test_data"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/transaction"
 	"github.com/golang/mock/gomock"
 	"github.com/multiformats/go-multiaddr"
 

@@ -6,9 +6,9 @@ package node
 import (
 	"fmt"
 
-	"github.com/ChainSafe/gossamer/internal/trie/codec"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/internal/trie/codec"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 // Encode encodes the node to the buffer given.

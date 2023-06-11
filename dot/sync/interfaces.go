@@ -7,12 +7,12 @@ import (
 	"encoding/json"
 	"sync"
 
-	"github.com/ChainSafe/gossamer/dot/network"
-	"github.com/ChainSafe/gossamer/dot/peerset"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/runtime"
-	rtstorage "github.com/ChainSafe/gossamer/lib/runtime/storage"
+	"github.com/dojimanetwork/gossamer/dot/network"
+	"github.com/dojimanetwork/gossamer/dot/peerset"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/runtime"
+	rtstorage "github.com/dojimanetwork/gossamer/lib/runtime/storage"
 	"github.com/libp2p/go-libp2p/core/peer"
 )
 

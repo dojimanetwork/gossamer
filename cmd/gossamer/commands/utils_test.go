@@ -13,7 +13,7 @@ import (
 
 	"github.com/spf13/viper"
 
-	"github.com/ChainSafe/gossamer/chain/westend"
+	"github.com/dojimanetwork/gossamer/chain/westend"
 )
 
 func TestAddStringFlagBindViper(t *testing.T) {

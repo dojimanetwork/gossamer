@@ -9,14 +9,14 @@ import (
 
 	"github.com/libp2p/go-libp2p/core/peer"
 
-	"github.com/ChainSafe/gossamer/dot/network"
-	"github.com/ChainSafe/gossamer/dot/peerset"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/crypto"
-	"github.com/ChainSafe/gossamer/lib/runtime"
-	rtstorage "github.com/ChainSafe/gossamer/lib/runtime/storage"
-	"github.com/ChainSafe/gossamer/lib/transaction"
+	"github.com/dojimanetwork/gossamer/dot/network"
+	"github.com/dojimanetwork/gossamer/dot/peerset"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/crypto"
+	"github.com/dojimanetwork/gossamer/lib/runtime"
+	rtstorage "github.com/dojimanetwork/gossamer/lib/runtime/storage"
+	"github.com/dojimanetwork/gossamer/lib/transaction"
 )
 
 // BlockState interface for block state methods

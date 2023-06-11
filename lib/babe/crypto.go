@@ -9,10 +9,10 @@ import (
 	"math"
 	"math/big"
 
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/crypto"
-	"github.com/ChainSafe/gossamer/lib/crypto/sr25519"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/crypto"
+	"github.com/dojimanetwork/gossamer/lib/crypto/sr25519"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 	"github.com/gtank/merlin"
 )
 
@@ -21,7 +21,7 @@ import (
 var babeVRFPrefix = []byte("substrate-babe-vrf")
 
 func makeTranscript(randomness Randomness, slot, epoch uint64) *merlin.Transcript {
-	t := merlin.NewTranscript("BABE") //string(types.BabeEngineID[:])
+	t := merlin.NewTranscript("BABE") // string(types.BabeEngineID[:])
 	crypto.AppendUint64(t, []byte("slot number"), slot)
 	crypto.AppendUint64(t, []byte("current epoch"), epoch)
 	t.AppendMessage([]byte("chain randomness"), randomness[:])

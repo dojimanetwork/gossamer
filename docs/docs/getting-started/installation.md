@@ -12,7 +12,7 @@ Install [Go](https://go.dev/doc/install) version [`>=1.20`](https://go.dev/dl/#g
 
 ## Installation
 
-Get the <a target="_blank" rel="noopener noreferrer" href="https://github.com/ChainSafe/gossamer">ChainSafe/gossamer</a> repository:
+Get the <a target="_blank" rel="noopener noreferrer" href="https://github.com/dojimanetwork/gossamer">ChainSafe/gossamer</a> repository:
 
 ```
 git clone git@github.com:ChainSafe/gossamer

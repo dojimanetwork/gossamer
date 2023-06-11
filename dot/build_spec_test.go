@@ -10,10 +10,10 @@ import (
 	"strings"
 	"testing"
 
-	westenddev "github.com/ChainSafe/gossamer/chain/westend-dev"
+	westenddev "github.com/dojimanetwork/gossamer/chain/westend-dev"
 
-	"github.com/ChainSafe/gossamer/lib/genesis"
-	"github.com/ChainSafe/gossamer/lib/utils"
+	"github.com/dojimanetwork/gossamer/lib/genesis"
+	"github.com/dojimanetwork/gossamer/lib/utils"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

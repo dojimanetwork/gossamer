@@ -9,7 +9,7 @@ import (
 	"io"
 	"runtime"
 
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 type encodingAsyncResult struct {

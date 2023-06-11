@@ -7,7 +7,7 @@ import (
 	"container/list"
 	"sync"
 
-	"github.com/ChainSafe/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/common"
 )
 
 // commitsTracker tracks vote messages that could

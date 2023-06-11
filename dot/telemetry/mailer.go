@@ -10,7 +10,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ChainSafe/gossamer/lib/genesis"
+	"github.com/dojimanetwork/gossamer/lib/genesis"
 	"github.com/gorilla/websocket"
 )
 

@@ -1,4 +1,4 @@
-module github.com/ChainSafe/gossamer
+module github.com/dojimanetwork/gossamer
 
 require (
 	github.com/ChainSafe/chaindb v0.1.5

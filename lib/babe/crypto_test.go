@@ -5,12 +5,11 @@ package babe
 
 import (
 	"errors"
-
-	"github.com/ChainSafe/gossamer/lib/crypto/sr25519"
-	"github.com/ChainSafe/gossamer/pkg/scale"
-	"github.com/stretchr/testify/assert"
-
 	"testing"
+
+	"github.com/dojimanetwork/gossamer/lib/crypto/sr25519"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestCalculateThreshold(t *testing.T) {

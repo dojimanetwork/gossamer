@@ -9,9 +9,9 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/ChainSafe/gossamer/devnet/cmd/scale-down-ecs-service/internal"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/ecs"
+	"github.com/dojimanetwork/gossamer/devnet/cmd/scale-down-ecs-service/internal"
 )
 
 type serviceScaler struct {

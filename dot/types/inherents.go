@@ -9,7 +9,7 @@ import (
 	"math/big"
 	"sort"
 
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 	"golang.org/x/exp/maps"
 )
 

@@ -9,8 +9,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/crypto"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/crypto"
 	secp256k1 "github.com/ethereum/go-ethereum/crypto"
 )
 

@@ -9,9 +9,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/ChainSafe/gossamer/internal/trie/node"
-	"github.com/ChainSafe/gossamer/internal/trie/tracking"
-	"github.com/ChainSafe/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/internal/trie/node"
+	"github.com/dojimanetwork/gossamer/internal/trie/tracking"
+	"github.com/dojimanetwork/gossamer/lib/common"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -4261,7 +4261,7 @@ func Benchmark_concatSlices(b *testing.B) {
 	// 16993 ns/op	  245760 B/op	       1 allocs/op
 	b.Run("direct append", func(b *testing.B) {
 		for i := 0; i < b.N; i++ {
-			concatenated := append(slice1, slice2...) //skipcq: CRT-D0001
+			concatenated := append(slice1, slice2...) // skipcq: CRT-D0001
 			concatenated[0] = 1
 		}
 	})

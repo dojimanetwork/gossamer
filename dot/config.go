@@ -8,13 +8,13 @@ import (
 	"strings"
 	"time"
 
-	cfg "github.com/ChainSafe/gossamer/config"
-	"github.com/ChainSafe/gossamer/dot/state/pruner"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/internal/log"
-	"github.com/ChainSafe/gossamer/internal/pprof"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/genesis"
+	cfg "github.com/dojimanetwork/gossamer/config"
+	"github.com/dojimanetwork/gossamer/dot/state/pruner"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/internal/pprof"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/genesis"
 )
 
 // TODO: update config to have toml rules and perhaps un-export some fields,

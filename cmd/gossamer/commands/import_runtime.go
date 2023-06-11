@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/ChainSafe/gossamer/lib/genesis"
+	"github.com/dojimanetwork/gossamer/lib/genesis"
 
-	"github.com/ChainSafe/gossamer/lib/os"
+	"github.com/dojimanetwork/gossamer/lib/os"
 	"github.com/spf13/cobra"
 )
 

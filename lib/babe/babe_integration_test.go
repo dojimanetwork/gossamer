@@ -9,11 +9,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/crypto/sr25519"
-	"github.com/ChainSafe/gossamer/lib/runtime"
 	"github.com/centrifuge/go-substrate-rpc-client/v4/signature"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/crypto/sr25519"
+	"github.com/dojimanetwork/gossamer/lib/runtime"
 	"github.com/golang/mock/gomock"
 
 	"github.com/stretchr/testify/require"

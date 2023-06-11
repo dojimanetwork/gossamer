@@ -7,8 +7,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/ChainSafe/gossamer/dot/rpc/modules"
-	"github.com/ChainSafe/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/dot/rpc/modules"
+	"github.com/dojimanetwork/gossamer/lib/common"
 )
 
 // GetPeers calls the endpoint system_peers

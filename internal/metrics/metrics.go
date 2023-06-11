@@ -9,8 +9,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/ChainSafe/gossamer/internal/httpserver"
-	"github.com/ChainSafe/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/internal/httpserver"
+	"github.com/dojimanetwork/gossamer/internal/log"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
 

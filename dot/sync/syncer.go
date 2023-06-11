@@ -6,10 +6,10 @@ package sync
 import (
 	"time"
 
-	"github.com/ChainSafe/gossamer/dot/network"
-	"github.com/ChainSafe/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/dot/network"
+	"github.com/dojimanetwork/gossamer/dot/types"
 
-	"github.com/ChainSafe/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/internal/log"
 	"github.com/libp2p/go-libp2p/core/peer"
 )
 

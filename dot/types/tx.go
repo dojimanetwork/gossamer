@@ -4,7 +4,7 @@
 package types
 
 import (
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 // TransactionSource represents source of Transaction

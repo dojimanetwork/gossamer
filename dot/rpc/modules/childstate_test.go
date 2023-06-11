@@ -8,10 +8,10 @@ import (
 	"net/http"
 	"testing"
 
-	apimocks "github.com/ChainSafe/gossamer/dot/rpc/modules/mocks"
-	"github.com/ChainSafe/gossamer/lib/common"
-	rtstorage "github.com/ChainSafe/gossamer/lib/runtime/storage"
-	"github.com/ChainSafe/gossamer/lib/trie"
+	apimocks "github.com/dojimanetwork/gossamer/dot/rpc/modules/mocks"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	rtstorage "github.com/dojimanetwork/gossamer/lib/runtime/storage"
+	"github.com/dojimanetwork/gossamer/lib/trie"
 	"github.com/golang/mock/gomock"
 
 	"github.com/stretchr/testify/assert"

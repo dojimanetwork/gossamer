@@ -6,14 +6,14 @@ package dot
 import (
 	"testing"
 
-	westend_dev "github.com/ChainSafe/gossamer/chain/westend-dev"
+	westend_dev "github.com/dojimanetwork/gossamer/chain/westend-dev"
 
-	"github.com/ChainSafe/gossamer/dot/state"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/internal/log"
-	"github.com/ChainSafe/gossamer/lib/runtime"
-	rtstorage "github.com/ChainSafe/gossamer/lib/runtime/storage"
-	"github.com/ChainSafe/gossamer/lib/runtime/wasmer"
+	"github.com/dojimanetwork/gossamer/dot/state"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/lib/runtime"
+	rtstorage "github.com/dojimanetwork/gossamer/lib/runtime/storage"
+	"github.com/dojimanetwork/gossamer/lib/runtime/wasmer"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

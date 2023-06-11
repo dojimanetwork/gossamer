@@ -4,7 +4,7 @@
 package state
 
 import (
-	"github.com/ChainSafe/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/common"
 )
 
 // prefixKey = prefix + hash

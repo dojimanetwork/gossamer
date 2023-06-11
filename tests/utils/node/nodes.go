@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	cfg "github.com/ChainSafe/gossamer/config"
+	cfg "github.com/dojimanetwork/gossamer/config"
 )
 
 // Nodes is a slice of nodes.

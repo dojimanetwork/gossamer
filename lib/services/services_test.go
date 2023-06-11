@@ -7,7 +7,7 @@ import (
 	"io"
 	"testing"
 
-	"github.com/ChainSafe/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/internal/log"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/require"
 )

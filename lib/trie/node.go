@@ -4,7 +4,7 @@
 package trie
 
 import (
-	"github.com/ChainSafe/gossamer/internal/trie/node"
+	"github.com/dojimanetwork/gossamer/internal/trie/node"
 )
 
 // Node is a node in the trie and can be a leaf or a branch.

@@ -3,7 +3,7 @@
 
 package tracking
 
-import "github.com/ChainSafe/gossamer/lib/common"
+import "github.com/dojimanetwork/gossamer/lib/common"
 
 // Deltas tracks the trie deltas, for example deleted node hashes.
 type Deltas struct {

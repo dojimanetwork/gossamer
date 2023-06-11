@@ -6,8 +6,8 @@ package crypto_test
 import (
 	"testing"
 
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/crypto/sr25519"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/crypto/sr25519"
 
 	"github.com/stretchr/testify/require"
 )

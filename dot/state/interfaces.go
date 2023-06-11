@@ -7,7 +7,7 @@ import (
 	"encoding/json"
 
 	"github.com/ChainSafe/chaindb"
-	"github.com/ChainSafe/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/dot/types"
 )
 
 // GetPutDeleter has methods to get, put and delete key values.

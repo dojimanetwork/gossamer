@@ -10,10 +10,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/devnet/cmd/scale-down-ecs-service/internal"
 	"github.com/aws/aws-sdk-go/aws"
 	request "github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/service/ecs"
+	"github.com/dojimanetwork/gossamer/devnet/cmd/scale-down-ecs-service/internal"
 	"github.com/golang/mock/gomock"
 )
 

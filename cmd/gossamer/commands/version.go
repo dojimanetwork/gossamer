@@ -6,7 +6,7 @@ package commands
 import (
 	"fmt"
 
-	cfg "github.com/ChainSafe/gossamer/config"
+	cfg "github.com/dojimanetwork/gossamer/config"
 
 	"github.com/spf13/cobra"
 )

@@ -6,9 +6,9 @@ package types
 import (
 	"fmt"
 
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/crypto/ed25519"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/crypto/ed25519"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 // GrandpaAuthoritiesRaw represents a GRANDPA authority where their key is a byte array

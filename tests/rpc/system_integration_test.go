@@ -8,17 +8,17 @@ import (
 	"testing"
 	"time"
 
-	cfg "github.com/ChainSafe/gossamer/config"
+	cfg "github.com/dojimanetwork/gossamer/config"
 
-	"github.com/ChainSafe/gossamer/tests/utils/retry"
+	"github.com/dojimanetwork/gossamer/tests/utils/retry"
 
-	"github.com/ChainSafe/gossamer/dot/rpc/modules"
-	"github.com/ChainSafe/gossamer/lib/common"
-	libutils "github.com/ChainSafe/gossamer/lib/utils"
-	"github.com/ChainSafe/gossamer/tests/utils"
-	"github.com/ChainSafe/gossamer/tests/utils/config"
-	"github.com/ChainSafe/gossamer/tests/utils/node"
-	"github.com/ChainSafe/gossamer/tests/utils/rpc"
+	"github.com/dojimanetwork/gossamer/dot/rpc/modules"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	libutils "github.com/dojimanetwork/gossamer/lib/utils"
+	"github.com/dojimanetwork/gossamer/tests/utils"
+	"github.com/dojimanetwork/gossamer/tests/utils/config"
+	"github.com/dojimanetwork/gossamer/tests/utils/node"
+	"github.com/dojimanetwork/gossamer/tests/utils/rpc"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -84,8 +84,8 @@ func TestStableNetworkRPC(t *testing.T) { //nolint:tparallel
 	defer syncCancel()
 	err = retry.UntilOK(syncTimeout, 10*time.Second, func() (bool, error) {
 		for _, node := range nodes {
-			//TODO: remove this once the issue has been addressed
-			// https://github.com/ChainSafe/gossamer/issues/3030
+			// TODO: remove this once the issue has been addressed
+			// https://github.com/dojimanetwork/gossamer/issues/3030
 			if node.Key() == config.AliceKey {
 				continue
 			}
@@ -111,8 +111,8 @@ func TestStableNetworkRPC(t *testing.T) { //nolint:tparallel
 		t.Run(node.String(), func(t *testing.T) {
 			t.Parallel()
 
-			//TODO: remove this once the issue has been addressed
-			// https://github.com/ChainSafe/gossamer/issues/3030
+			// TODO: remove this once the issue has been addressed
+			// https://github.com/dojimanetwork/gossamer/issues/3030
 			if node.Key() == config.AliceKey {
 				t.Logf("Skipping test for alice")
 				t.Skip()

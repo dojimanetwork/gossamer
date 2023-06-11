@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/ChainSafe/gossamer/dot/state"
+	"github.com/dojimanetwork/gossamer/dot/state"
 	"github.com/spf13/cobra"
 )
 

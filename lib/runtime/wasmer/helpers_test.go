@@ -10,7 +10,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/ChainSafe/gossamer/lib/genesis"
+	"github.com/dojimanetwork/gossamer/lib/genesis"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

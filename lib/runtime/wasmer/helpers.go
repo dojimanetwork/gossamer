@@ -4,15 +4,15 @@
 package wasmer
 
 // #include <stdlib.h>
-import "C" //skipcq: SCC-compile
+import "C" // skipcq: SCC-compile
 
 import (
 	"fmt"
 	"math/big"
 
-	"github.com/ChainSafe/gossamer/lib/common/types"
-	"github.com/ChainSafe/gossamer/lib/runtime"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/lib/common/types"
+	"github.com/dojimanetwork/gossamer/lib/runtime"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 	"github.com/wasmerio/go-ext-wasm/wasmer"
 )
 

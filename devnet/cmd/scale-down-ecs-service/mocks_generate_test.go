@@ -3,4 +3,4 @@
 
 package main
 
-//go:generate mockgen -destination=mocks_test.go -package=$GOPACKAGE github.com/ChainSafe/gossamer/devnet/cmd/scale-down-ecs-service/internal ECSAPI
+//go:generate mockgen -destination=mocks_test.go -package=$GOPACKAGE github.com/dojimanetwork/gossamer/devnet/cmd/scale-down-ecs-service/internal ECSAPI

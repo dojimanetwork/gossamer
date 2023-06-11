@@ -9,12 +9,12 @@ import (
 	"strings"
 	"testing"
 
-	cfg "github.com/ChainSafe/gossamer/config"
+	cfg "github.com/dojimanetwork/gossamer/config"
 
-	libutils "github.com/ChainSafe/gossamer/lib/utils"
-	"github.com/ChainSafe/gossamer/tests/utils"
-	"github.com/ChainSafe/gossamer/tests/utils/config"
-	"github.com/ChainSafe/gossamer/tests/utils/node"
+	libutils "github.com/dojimanetwork/gossamer/lib/utils"
+	"github.com/dojimanetwork/gossamer/tests/utils"
+	"github.com/dojimanetwork/gossamer/tests/utils/config"
+	"github.com/dojimanetwork/gossamer/tests/utils/node"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -66,6 +66,6 @@ func TestStartGossamerAndPolkadotAPI(t *testing.T) {
 	data, err := exec.CommandContext(ctx, parts[0], parts[1:]...).CombinedOutput()
 	assert.NoError(t, err, string(data))
 
-	//uncomment this to see log results from javascript tests
-	//fmt.Printf("%s\n", data)
+	// uncomment this to see log results from javascript tests
+	// fmt.Printf("%s\n", data)
 }

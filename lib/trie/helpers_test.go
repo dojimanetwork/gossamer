@@ -8,9 +8,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/internal/trie/node"
-	"github.com/ChainSafe/gossamer/internal/trie/tracking"
-	"github.com/ChainSafe/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/internal/trie/node"
+	"github.com/dojimanetwork/gossamer/internal/trie/tracking"
+	"github.com/dojimanetwork/gossamer/lib/common"
 	"github.com/stretchr/testify/require"
 	"golang.org/x/exp/maps"
 )
@@ -26,7 +26,7 @@ type keyValues struct {
 func newGenerator() (prng *rand.Rand) {
 	seed := time.Now().UnixNano()
 	source := rand.NewSource(seed)
-	return rand.New(source) //skipcq: GSC-G404
+	return rand.New(source) // skipcq: GSC-G404
 }
 
 func generateKeyValues(tb testing.TB, generator *rand.Rand, size int) (kv map[string][]byte) {

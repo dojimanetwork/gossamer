@@ -7,7 +7,7 @@ import (
 	"errors"
 	"io"
 
-	"github.com/ChainSafe/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/common"
 )
 
 // Result represents a Result type.

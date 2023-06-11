@@ -4,8 +4,8 @@
 package config
 
 import (
-	cfg "github.com/ChainSafe/gossamer/config"
-	"github.com/ChainSafe/gossamer/lib/common"
+	cfg "github.com/dojimanetwork/gossamer/config"
+	"github.com/dojimanetwork/gossamer/lib/common"
 )
 
 // ParseNetworkRole converts a common.NetworkRole to a string representation.

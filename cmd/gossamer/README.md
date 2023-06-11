@@ -7,7 +7,7 @@ You'll need to have [Go](https://golang.org/doc/install) installed on your machi
 ### Clone the repository
 
 ```bash
-git clone https://github.com/ChainSafe/gossamer.git
+git clone https://github.com/dojimanetwork/gossamer.git
 cd gossamer
 ```
 

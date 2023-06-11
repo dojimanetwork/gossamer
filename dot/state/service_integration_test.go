@@ -10,12 +10,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/dot/state/pruner"
-	"github.com/ChainSafe/gossamer/dot/telemetry"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/internal/log"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/trie"
+	"github.com/dojimanetwork/gossamer/dot/state/pruner"
+	"github.com/dojimanetwork/gossamer/dot/telemetry"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/trie"
 	"github.com/golang/mock/gomock"
 
 	"github.com/ChainSafe/chaindb"
@@ -168,7 +168,7 @@ func TestService_BlockTree(t *testing.T) {
 }
 
 func TestService_StorageTriePruning(t *testing.T) {
-	t.Skip() // Unskip once https://github.com/ChainSafe/gossamer/pull/2831 is done
+	t.Skip() // Unskip once https://github.com/dojimanetwork/gossamer/pull/2831 is done
 
 	ctrl := gomock.NewController(t)
 	telemetryMock := NewMockTelemetry(ctrl)

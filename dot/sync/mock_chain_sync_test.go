@@ -7,8 +7,8 @@ package sync
 import (
 	reflect "reflect"
 
-	types "github.com/ChainSafe/gossamer/dot/types"
-	common "github.com/ChainSafe/gossamer/lib/common"
+	types "github.com/dojimanetwork/gossamer/dot/types"
+	common "github.com/dojimanetwork/gossamer/lib/common"
 	gomock "github.com/golang/mock/gomock"
 	peer "github.com/libp2p/go-libp2p/core/peer"
 )

@@ -4,7 +4,7 @@
 package config
 
 import (
-	cfg "github.com/ChainSafe/gossamer/config"
+	cfg "github.com/dojimanetwork/gossamer/config"
 )
 
 const (

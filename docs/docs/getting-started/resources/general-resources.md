@@ -10,7 +10,7 @@ Here you will find resources to help facilitate your learning about _Polkadot_, 
 
 ## Polkadot
 
-To start, it would be extremely beneficial to have an understanding of the Polkadot Network. For a high-level introduction to Polkadot, check out the  <a target="_blank" rel="noopener noreferrer" href="https://polkadot.network/Polkadot-lightpaper.pdf">lightpaper</a>. To understand the motivation behind Polkadot's creation and what makes it unique, check out this great blog post <a target="_blank" rel="noopener noreferrer" href="https://medium.com/polkadot-network/a-brief-summary-of-everything-substrate-and-polkadot-f1f21071499d">A brief summary of everything Substrate and Polkadot</a>. While reading, it would be helpful to note that <a target="_blank" rel="noopener noreferrer" href="https://github.com/paritytech/substrate">Substrate</a> and <a target="_blank" rel="noopener noreferrer" href="https://github.com/ChainSafe/gossamer">Gossamer</a> are both implementations of the Polkadot Host. 
+To start, it would be extremely beneficial to have an understanding of the Polkadot Network. For a high-level introduction to Polkadot, check out the  <a target="_blank" rel="noopener noreferrer" href="https://polkadot.network/Polkadot-lightpaper.pdf">lightpaper</a>. To understand the motivation behind Polkadot's creation and what makes it unique, check out this great blog post <a target="_blank" rel="noopener noreferrer" href="https://medium.com/polkadot-network/a-brief-summary-of-everything-substrate-and-polkadot-f1f21071499d">A brief summary of everything Substrate and Polkadot</a>. While reading, it would be helpful to note that <a target="_blank" rel="noopener noreferrer" href="https://github.com/paritytech/substrate">Substrate</a> and <a target="_blank" rel="noopener noreferrer" href="https://github.com/dojimanetwork/gossamer">Gossamer</a> are both implementations of the Polkadot Host. 
 
 ### Additional Resources
 
@@ -42,7 +42,7 @@ The Polkadot Host plays two important roles within the Polkadot ecosystem.
 
 - The Polkadot Host is **a blockchain development framework**, similar to how React and Angular are web development frameworks, but rather than helping developers build web applications, implementations of the Polkadot Host help developers build blockchains. 
 
-As mentioned above, both <a target="_blank" rel="noopener noreferrer" href="https://github.com/paritytech/substrate">Substrate</a> and <a target="_blank" rel="noopener noreferrer" href="https://github.com/ChainSafe/gossamer">Gossamer</a> are implementations of the Polkadot Host. If you're interested in the nitty-gritty technical details, check out the <a target="_blank" rel="noopener noreferrer" href="https://github.com/w3f/polkadot-spec/blob/master/polkadot-host-spec/polkadot_host_spec.pdf">Polkadot Host specification</a>.
+As mentioned above, both <a target="_blank" rel="noopener noreferrer" href="https://github.com/paritytech/substrate">Substrate</a> and <a target="_blank" rel="noopener noreferrer" href="https://github.com/dojimanetwork/gossamer">Gossamer</a> are implementations of the Polkadot Host. If you're interested in the nitty-gritty technical details, check out the <a target="_blank" rel="noopener noreferrer" href="https://github.com/w3f/polkadot-spec/blob/master/polkadot-host-spec/polkadot_host_spec.pdf">Polkadot Host specification</a>.
 
 ## Gossamer
 

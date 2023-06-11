@@ -7,13 +7,13 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ChainSafe/gossamer/dot"
+	"github.com/dojimanetwork/gossamer/dot"
 
-	"github.com/ChainSafe/gossamer/lib/keystore"
+	"github.com/dojimanetwork/gossamer/lib/keystore"
 
-	cfg "github.com/ChainSafe/gossamer/config"
+	cfg "github.com/dojimanetwork/gossamer/config"
 
-	"github.com/ChainSafe/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/internal/log"
 
 	"github.com/spf13/cobra"
 )

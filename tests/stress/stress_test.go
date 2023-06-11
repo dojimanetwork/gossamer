@@ -22,15 +22,15 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ChainSafe/gossamer/dot/rpc/modules"
-	gosstypes "github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/internal/log"
-	"github.com/ChainSafe/gossamer/lib/common"
-	libutils "github.com/ChainSafe/gossamer/lib/utils"
-	"github.com/ChainSafe/gossamer/tests/utils"
-	"github.com/ChainSafe/gossamer/tests/utils/config"
-	"github.com/ChainSafe/gossamer/tests/utils/node"
-	"github.com/ChainSafe/gossamer/tests/utils/rpc"
+	"github.com/dojimanetwork/gossamer/dot/rpc/modules"
+	gosstypes "github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	libutils "github.com/dojimanetwork/gossamer/lib/utils"
+	"github.com/dojimanetwork/gossamer/tests/utils"
+	"github.com/dojimanetwork/gossamer/tests/utils/config"
+	"github.com/dojimanetwork/gossamer/tests/utils/node"
+	"github.com/dojimanetwork/gossamer/tests/utils/rpc"
 )
 
 func TestMain(m *testing.M) {
@@ -99,7 +99,7 @@ func stopNodes(cancel context.CancelFunc, runtimeErrors []<-chan error) {
 }
 
 // TODO: add tests against latest dev runtime
-// See https://github.com/ChainSafe/gossamer/issues/2705
+// See https://github.com/dojimanetwork/gossamer/issues/2705
 func TestSync_SingleBlockProducer(t *testing.T) {
 	const numNodes = 4
 	genesisPath := libutils.GetWestendDevRawGenesisPath(t)
@@ -241,7 +241,7 @@ func TestSync_SingleSyncingNode(t *testing.T) {
 }
 
 // TODO: add tests against latest dev runtime
-// See https://github.com/ChainSafe/gossamer/issues/2705
+// See https://github.com/dojimanetwork/gossamer/issues/2705
 func TestSync_Bench(t *testing.T) {
 	utils.Logger.Patch(log.SetLevel(log.Info))
 	const numBlocks uint = 64

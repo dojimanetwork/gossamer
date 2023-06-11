@@ -14,28 +14,28 @@ import (
 	"syscall"
 	"time"
 
-	cfg "github.com/ChainSafe/gossamer/config"
-	"github.com/ChainSafe/gossamer/dot/core"
-	"github.com/ChainSafe/gossamer/dot/digest"
-	"github.com/ChainSafe/gossamer/dot/network"
-	"github.com/ChainSafe/gossamer/dot/rpc"
-	"github.com/ChainSafe/gossamer/dot/state"
-	"github.com/ChainSafe/gossamer/dot/state/pruner"
-	dotsync "github.com/ChainSafe/gossamer/dot/sync"
-	"github.com/ChainSafe/gossamer/dot/system"
-	"github.com/ChainSafe/gossamer/dot/telemetry"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/internal/log"
-	"github.com/ChainSafe/gossamer/internal/metrics"
-	"github.com/ChainSafe/gossamer/lib/babe"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/genesis"
-	"github.com/ChainSafe/gossamer/lib/grandpa"
-	"github.com/ChainSafe/gossamer/lib/keystore"
-	"github.com/ChainSafe/gossamer/lib/runtime"
-	"github.com/ChainSafe/gossamer/lib/runtime/wasmer"
-	"github.com/ChainSafe/gossamer/lib/services"
-	"github.com/ChainSafe/gossamer/lib/utils"
+	cfg "github.com/dojimanetwork/gossamer/config"
+	"github.com/dojimanetwork/gossamer/dot/core"
+	"github.com/dojimanetwork/gossamer/dot/digest"
+	"github.com/dojimanetwork/gossamer/dot/network"
+	"github.com/dojimanetwork/gossamer/dot/rpc"
+	"github.com/dojimanetwork/gossamer/dot/state"
+	"github.com/dojimanetwork/gossamer/dot/state/pruner"
+	dotsync "github.com/dojimanetwork/gossamer/dot/sync"
+	"github.com/dojimanetwork/gossamer/dot/system"
+	"github.com/dojimanetwork/gossamer/dot/telemetry"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/internal/metrics"
+	"github.com/dojimanetwork/gossamer/lib/babe"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/genesis"
+	"github.com/dojimanetwork/gossamer/lib/grandpa"
+	"github.com/dojimanetwork/gossamer/lib/keystore"
+	"github.com/dojimanetwork/gossamer/lib/runtime"
+	"github.com/dojimanetwork/gossamer/lib/runtime/wasmer"
+	"github.com/dojimanetwork/gossamer/lib/services"
+	"github.com/dojimanetwork/gossamer/lib/utils"
 )
 
 var logger = log.NewFromGlobal(log.AddContext("pkg", "dot"))
@@ -316,7 +316,7 @@ func newNode(config *cfg.Config,
 		genesisHash := stateSrvc.Block.GenesisHash()
 		netstate := networkSrvc.NetworkState()
 
-		//sent NewSystemConnectedTM only if networkServiceEnabled
+		// sent NewSystemConnectedTM only if networkServiceEnabled
 		connectedMsg := telemetry.NewSystemConnected(
 			config.Core.GrandpaAuthority,
 			sysSrvc.ChainName(),

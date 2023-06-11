@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ChainSafe/gossamer/lib/common"
 	"github.com/disiqueira/gotree"
+	"github.com/dojimanetwork/gossamer/lib/common"
 )
 
 // node is an element in the BlockTree

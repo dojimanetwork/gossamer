@@ -4,7 +4,7 @@
 package genesis
 
 import (
-	"github.com/ChainSafe/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/common"
 )
 
 // Genesis stores the data parsed from the genesis configuration file

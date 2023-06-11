@@ -7,8 +7,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ChainSafe/gossamer/cmd/gossamer/commands"
-	"github.com/ChainSafe/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/cmd/gossamer/commands"
+	"github.com/dojimanetwork/gossamer/internal/log"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )

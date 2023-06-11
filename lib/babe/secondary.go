@@ -7,9 +7,9 @@ import (
 	"encoding/binary"
 	"math/big"
 
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/crypto/sr25519"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/crypto/sr25519"
 )
 
 // https://github.com/paritytech/substrate/blob/b07765f9ecc4c508fb4d0fba930b476c8509f5c2/client/consensus/babe/src/authorship.rs#L98

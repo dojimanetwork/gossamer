@@ -5,14 +5,14 @@
   <a href="https://www.gnu.org/licenses/gpl-3.0">
     <img alt="License: GPL v3" src="https://img.shields.io/badge/License-GPLv3-blue.svg?style=for-the-badge&label=License" height="20"/>
   </a>
-    <a href="https://github.com/ChainSafe/gossamer/actions">
+    <a href="https://github.com/dojimanetwork/gossamer/actions">
     <img alt="build status" src="https://img.shields.io/github/actions/workflow/status/ChainSafe/gossamer/build.yml?branch=development&style=for-the-badge&logo=github&label=build" height="20"/>
   </a>
-  <a href="https://godoc.org/github.com/ChainSafe/gossamer">
+  <a href="https://godoc.org/github.com/dojimanetwork/gossamer">
     <img alt="go doc" src="http://img.shields.io/badge/godoc-reference-5272B4.svg?style=for-the-badge" height="20" />
   </a>
-  <a href="https://goreportcard.com/report/github.com/ChainSafe/gossamer">
-    <img alt="go report card" src="https://goreportcard.com/badge/github.com/ChainSafe/gossamer?style=for-the-badge" height="20" />
+  <a href="https://goreportcard.com/report/github.com/dojimanetwork/gossamer">
+    <img alt="go report card" src="https://goreportcard.com/badge/github.com/dojimanetwork/gossamer?style=for-the-badge" height="20" />
   </a>
 </div>
 <div align="center">
@@ -58,7 +58,7 @@ is used to build it. Building Gossamer requires version 1.20 or higher of
 
 ### Installation
 
-Clone the [Gossamer](https://github.com/ChainSafe/gossamer) repository and
+Clone the [Gossamer](https://github.com/dojimanetwork/gossamer) repository and
 checkout the `development` branch:
 
 ```sh

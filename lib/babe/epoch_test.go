@@ -6,9 +6,9 @@ package babe
 import (
 	"testing"
 
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/crypto/sr25519"
-	"github.com/ChainSafe/gossamer/lib/keystore"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/crypto/sr25519"
+	"github.com/dojimanetwork/gossamer/lib/keystore"
 
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/require"

@@ -9,7 +9,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ChainSafe/gossamer/dot/telemetry"
+	"github.com/dojimanetwork/gossamer/dot/telemetry"
 )
 
 var (

@@ -4,7 +4,7 @@
 package pruner
 
 import (
-	"github.com/ChainSafe/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/common"
 )
 
 const (

@@ -4,7 +4,7 @@
 package types
 
 import (
-	"github.com/ChainSafe/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/common"
 )
 
 // Extrinsic is a generic transaction whose format is verified in the runtime

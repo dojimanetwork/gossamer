@@ -6,9 +6,9 @@ package state
 import (
 	"testing"
 
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/trie"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/trie"
 
 	"github.com/stretchr/testify/require"
 )
@@ -37,7 +37,7 @@ func TestHighestRoundAndSetID(t *testing.T) {
 	require.Equal(t, uint64(0), setID)
 
 	// is possible to have a lower round number
-	// in the same set ID: https://github.com/ChainSafe/gossamer/issues/3150
+	// in the same set ID: https://github.com/dojimanetwork/gossamer/issues/3150
 	err = bs.setHighestRoundAndSetID(9, 0)
 	require.NoError(t, err)
 

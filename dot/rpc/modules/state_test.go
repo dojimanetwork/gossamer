@@ -20,15 +20,15 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/ChainSafe/gossamer/lib/runtime/wasmer"
+	"github.com/dojimanetwork/gossamer/lib/runtime/wasmer"
 
-	"github.com/ChainSafe/gossamer/dot/rpc/modules/mocks"
-	testdata "github.com/ChainSafe/gossamer/dot/rpc/modules/test_data"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/blocktree"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/runtime"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/dot/rpc/modules/mocks"
+	testdata "github.com/dojimanetwork/gossamer/dot/rpc/modules/test_data"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/blocktree"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/runtime"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 )
@@ -284,7 +284,7 @@ func TestStateModuleGetKeysPaged(t *testing.T) {
 
 // TestCall tests the state_call.
 // TODO: Improve runtime tests
-// https://github.com/ChainSafe/gossamer/issues/3234
+// https://github.com/dojimanetwork/gossamer/issues/3234
 func TestCall(t *testing.T) {
 	ctrl := gomock.NewController(t)
 	testHash := common.NewHash([]byte{0x01, 0x02})

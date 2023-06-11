@@ -8,8 +8,8 @@ package grandpa
 import (
 	"testing"
 
-	"github.com/ChainSafe/gossamer/lib/crypto/ed25519"
-	"github.com/ChainSafe/gossamer/lib/keystore"
+	"github.com/dojimanetwork/gossamer/lib/crypto/ed25519"
+	"github.com/dojimanetwork/gossamer/lib/keystore"
 	"github.com/golang/mock/gomock"
 
 	"github.com/libp2p/go-libp2p/core/peer"

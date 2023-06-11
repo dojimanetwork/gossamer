@@ -8,7 +8,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/ChainSafe/gossamer/lib/runtime"
+	"github.com/dojimanetwork/gossamer/lib/runtime"
 	"github.com/stretchr/testify/require"
 
 	"github.com/klauspost/compress/zstd"

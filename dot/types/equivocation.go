@@ -3,7 +3,7 @@
 
 package types
 
-import "github.com/ChainSafe/gossamer/lib/crypto/sr25519"
+import "github.com/dojimanetwork/gossamer/lib/crypto/sr25519"
 
 // BabeEquivocationProof represents a babe equivocation proof.
 // An equivocation happens when a validator produces more than one block on the same slot.

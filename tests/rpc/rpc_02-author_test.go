@@ -12,18 +12,18 @@ import (
 
 	"github.com/centrifuge/go-substrate-rpc-client/v4/scale"
 
-	libutils "github.com/ChainSafe/gossamer/lib/utils"
-	"github.com/ChainSafe/gossamer/tests/utils/config"
-	"github.com/ChainSafe/gossamer/tests/utils/node"
-	"github.com/ChainSafe/gossamer/tests/utils/retry"
 	gsrpc "github.com/centrifuge/go-substrate-rpc-client/v4"
 	"github.com/centrifuge/go-substrate-rpc-client/v4/signature"
 	"github.com/centrifuge/go-substrate-rpc-client/v4/types"
+	libutils "github.com/dojimanetwork/gossamer/lib/utils"
+	"github.com/dojimanetwork/gossamer/tests/utils/config"
+	"github.com/dojimanetwork/gossamer/tests/utils/node"
+	"github.com/dojimanetwork/gossamer/tests/utils/retry"
 	"github.com/stretchr/testify/require"
 )
 
 // TODO: add test against latest dev runtime
-// See https://github.com/ChainSafe/gossamer/issues/2705
+// See https://github.com/dojimanetwork/gossamer/issues/2705
 func TestAuthorSubmitExtrinsic(t *testing.T) {
 	genesisPath := libutils.GetWestendDevRawGenesisPath(t)
 	tomlConfig := config.Default()

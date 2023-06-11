@@ -11,10 +11,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/crypto"
-
 	"github.com/ChainSafe/go-schnorrkel"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/crypto"
 )
 
 // PublicKeyLength is the fixed Public Key Length

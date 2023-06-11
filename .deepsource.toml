@@ -19,4 +19,4 @@ enabled = true
 cgo_enabled = true
 
 [analyzers.meta]
-import_root = "github.com/ChainSafe/gossamer"
+import_root = "github.com/dojimanetwork/gossamer"

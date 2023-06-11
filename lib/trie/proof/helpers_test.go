@@ -8,9 +8,9 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/ChainSafe/gossamer/internal/trie/node"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/internal/trie/node"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 	"github.com/stretchr/testify/require"
 )
 
@@ -63,7 +63,7 @@ func concatBytes(slices [][]byte) (concatenated []byte) {
 // deterministic unit tests.
 func generateBytes(t *testing.T, length uint) (bytes []byte) {
 	t.Helper()
-	generator := rand.New(rand.NewSource(0)) //skipcq: GSC-G404
+	generator := rand.New(rand.NewSource(0)) // skipcq: GSC-G404
 	bytes = make([]byte, length)
 	_, err := generator.Read(bytes)
 	require.NoError(t, err)

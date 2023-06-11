@@ -8,11 +8,11 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/internal/log"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/keystore"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/keystore"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 var ErrProvidedKeyDoesNotMatch = errors.New("generated public key does not equal provided public key")
@@ -157,7 +157,7 @@ func (am *AuthorModule) InsertKey(r *http.Request, req *KeyInsertRequest, _ *Key
 		return err
 	}
 
-	//strings.EqualFold compare using case-insensitivity.
+	// strings.EqualFold compare using case-insensitivity.
 	if !strings.EqualFold(keyPair.Public().Hex(), keyReq.PublicKey) {
 		return ErrProvidedKeyDoesNotMatch
 	}

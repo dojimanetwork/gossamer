@@ -10,8 +10,8 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"github.com/ChainSafe/gossamer/dot/rpc/json2"
-	"github.com/ChainSafe/gossamer/dot/rpc/modules"
+	"github.com/dojimanetwork/gossamer/dot/rpc/json2"
+	"github.com/dojimanetwork/gossamer/dot/rpc/modules"
 	"github.com/gorilla/rpc/v2"
 )
 

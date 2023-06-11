@@ -9,14 +9,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/dot/rpc/modules"
-	"github.com/ChainSafe/gossamer/lib/runtime"
+	"github.com/dojimanetwork/gossamer/dot/rpc/modules"
+	"github.com/dojimanetwork/gossamer/lib/runtime"
 
-	"github.com/ChainSafe/gossamer/lib/common"
-	libutils "github.com/ChainSafe/gossamer/lib/utils"
-	"github.com/ChainSafe/gossamer/tests/utils/config"
-	"github.com/ChainSafe/gossamer/tests/utils/node"
-	"github.com/ChainSafe/gossamer/tests/utils/rpc"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	libutils "github.com/dojimanetwork/gossamer/lib/utils"
+	"github.com/dojimanetwork/gossamer/tests/utils/config"
+	"github.com/dojimanetwork/gossamer/tests/utils/node"
+	"github.com/dojimanetwork/gossamer/tests/utils/rpc"
 	"github.com/stretchr/testify/require"
 )
 
@@ -34,7 +34,7 @@ func TestStateRPCResponseValidation(t *testing.T) { //nolint:tparallel
 	require.NoError(t, err)
 
 	// TODO: Improve runtime tests
-	// https://github.com/ChainSafe/gossamer/issues/3234
+	// https://github.com/dojimanetwork/gossamer/issues/3234
 	t.Run("state_call", func(t *testing.T) {
 		t.Parallel()
 

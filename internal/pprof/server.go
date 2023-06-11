@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"net/http/pprof"
 
-	"github.com/ChainSafe/gossamer/internal/httpserver"
+	"github.com/dojimanetwork/gossamer/internal/httpserver"
 )
 
 // NewServer creates a new Pprof server which will listen at

@@ -8,7 +8,7 @@ import (
 	"errors"
 	"io"
 
-	"github.com/ChainSafe/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/common"
 )
 
 // Uint32OrHash represents a variadic type that is either uint32 or common.Hash.
