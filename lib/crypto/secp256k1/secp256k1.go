@@ -89,6 +89,12 @@ func NewKeypair(pk ecdsa.PrivateKey) *Keypair {
 	}
 }
 
+func NewPublicKey(pk ecdsa.PublicKey) PublicKey {
+	return PublicKey{
+		key: pk,
+	}
+}
+
 // NewKeypairFromPrivate will return a Keypair for a PrivateKey
 func NewKeypairFromPrivate(priv *PrivateKey) (*Keypair, error) {
 	pub, err := priv.Public()
