@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/tests/utils"
+	"github.com/dojimanetwork/gossamer/tests/utils"
 	"github.com/stretchr/testify/require"
 )
 
@@ -20,12 +20,12 @@ func TestContractsRPC(t *testing.T) {
 	}
 
 	testCases := []*testCase{
-		{ //TODO
+		{ // TODO
 			description: "test contracts_getStorage",
 			method:      "contracts_getStorage",
 			skip:        true,
 		},
-		{ //TODO
+		{ // TODO
 			description: "test contracts_getStorage",
 			method:      "contracts_getStorage",
 			skip:        true,

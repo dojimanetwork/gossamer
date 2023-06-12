@@ -4,7 +4,7 @@
 package main
 
 import (
-	"github.com/ChainSafe/gossamer/chain/dev"
+	"github.com/dojimanetwork/gossamer/chain/dev"
 	"github.com/urfave/cli"
 )
 

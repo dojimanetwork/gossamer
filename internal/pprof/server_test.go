@@ -10,13 +10,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/internal/httpserver"
+	"github.com/dojimanetwork/gossamer/internal/httpserver"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
 
-//go:generate mockgen -destination=logger_mock_test.go -package $GOPACKAGE github.com/ChainSafe/gossamer/internal/httpserver Logger
+//go:generate mockgen -destination=logger_mock_test.go -package $GOPACKAGE github.com/dojimanetwork/gossamer/internal/httpserver Logger
 
 func Test_Server(t *testing.T) {
 	t.Parallel()

@@ -6,9 +6,9 @@ package types
 import (
 	"bytes"
 
-	"github.com/ChainSafe/gossamer/lib/common"
 	"github.com/centrifuge/go-substrate-rpc-client/v3/scale"
 	ctypes "github.com/centrifuge/go-substrate-rpc-client/v3/types"
+	"github.com/dojimanetwork/gossamer/lib/common"
 )
 
 // Extrinsic is a generic transaction whose format is verified in the runtime

@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 // Body is the extrinsics(not encoded) inside a state block.
@@ -101,7 +101,7 @@ func (b *Body) HasExtrinsic(target Extrinsic) (bool, error) {
 			return true, nil
 		}
 
-		//otherwise try to encode and compare
+		// otherwise try to encode and compare
 		encext, err := scale.Marshal(currext)
 		if err != nil {
 			return false, fmt.Errorf("fail while scale encode: %w", err)

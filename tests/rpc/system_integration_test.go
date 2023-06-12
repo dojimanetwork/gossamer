@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/ChainSafe/gossamer/dot/rpc/modules"
-	"github.com/ChainSafe/gossamer/tests/utils"
+	"github.com/dojimanetwork/gossamer/dot/rpc/modules"
+	"github.com/dojimanetwork/gossamer/tests/utils"
 
 	"github.com/stretchr/testify/require"
 )

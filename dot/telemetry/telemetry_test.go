@@ -15,8 +15,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/genesis"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/genesis"
 	"github.com/gorilla/websocket"
 	"github.com/stretchr/testify/require"
 )
@@ -194,7 +194,8 @@ main:
 }
 
 // TestInfiniteListener starts loop that print out data received on websocket ws://localhost:8001/
-//  this can be useful to see what data is sent to telemetry server
+//
+//	this can be useful to see what data is sent to telemetry server
 func TestInfiniteListener(t *testing.T) {
 	t.Skip()
 	resultCh = make(chan []byte)

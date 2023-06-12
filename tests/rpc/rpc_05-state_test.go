@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/dot/rpc/modules"
-	"github.com/ChainSafe/gossamer/tests/utils"
+	"github.com/dojimanetwork/gossamer/dot/rpc/modules"
+	"github.com/dojimanetwork/gossamer/tests/utils"
 	"github.com/stretchr/testify/require"
 )
 
@@ -43,7 +43,7 @@ func TestStateRPCResponseValidation(t *testing.T) {
 			params:      `["", "","0x580d77a9136035a0bc3c3cd86286172f7f81291164c5914266073a30466fba21"]`,
 			expected:    modules.StateCallResponse{},
 		},
-		{ //TODO disable skip when implemented
+		{ // TODO disable skip when implemented
 			description: "Test state_getKeysPaged",
 			method:      "state_getKeysPaged",
 			skip:        true,

@@ -7,12 +7,12 @@ import (
 	"io"
 	"testing"
 
-	"github.com/ChainSafe/gossamer/chain/gssmr"
-	"github.com/ChainSafe/gossamer/dot"
-	"github.com/ChainSafe/gossamer/lib/utils"
+	"github.com/dojimanetwork/gossamer/chain/gssmr"
+	"github.com/dojimanetwork/gossamer/dot"
+	"github.com/dojimanetwork/gossamer/lib/utils"
 
-	ctoml "github.com/ChainSafe/gossamer/dot/config/toml"
-	"github.com/ChainSafe/gossamer/internal/log"
+	ctoml "github.com/dojimanetwork/gossamer/dot/config/toml"
+	"github.com/dojimanetwork/gossamer/internal/log"
 	"github.com/stretchr/testify/require"
 	"github.com/urfave/cli"
 )

@@ -4,7 +4,7 @@
 package runtime
 
 import (
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 //go:generate mockery --name Version --structname Version --case underscore --keeptree

@@ -13,13 +13,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ChainSafe/gossamer/dot/peerset"
+	"github.com/dojimanetwork/gossamer/dot/peerset"
 	"github.com/libp2p/go-libp2p-core/peer"
 
-	"github.com/ChainSafe/gossamer/dot/network"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/common/variadic"
+	"github.com/dojimanetwork/gossamer/dot/network"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/common/variadic"
 )
 
 const (
@@ -782,9 +782,9 @@ func (cs *chainSync) determineSyncPeers(req *network.BlockRequestMessage, peersT
 // validateResponse performs pre-validation of a block response before placing it into either the
 // pendingBlocks or readyBlocks set.
 // It checks the following:
-// 	- the response is not empty
-//  - the response contains all the expected fields
-//  - each block has the correct parent, ie. the response constitutes a valid chain
+//   - the response is not empty
+//   - the response contains all the expected fields
+//   - each block has the correct parent, ie. the response constitutes a valid chain
 func (cs *chainSync) validateResponse(req *network.BlockRequestMessage,
 	resp *network.BlockResponseMessage, p peer.ID) error {
 	if resp == nil || len(resp.BlockData) == 0 {

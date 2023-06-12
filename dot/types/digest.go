@@ -6,8 +6,8 @@ package types
 import (
 	"fmt"
 
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 // NewDigestItem returns a new VaryingDataType to represent a DigestItem

@@ -9,10 +9,10 @@ import (
 	"math"
 	"math/big"
 
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/internal/log"
-	"github.com/ChainSafe/gossamer/lib/services"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/lib/services"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 var maxUint64 = uint64(math.MaxUint64)

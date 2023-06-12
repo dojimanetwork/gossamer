@@ -8,11 +8,11 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/internal/log"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/keystore"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/keystore"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 // AuthorModule holds a pointer to the API
@@ -156,7 +156,7 @@ func (am *AuthorModule) InsertKey(r *http.Request, req *KeyInsertRequest, res *K
 		return err
 	}
 
-	//strings.EqualFold compare using case-insensitivity.
+	// strings.EqualFold compare using case-insensitivity.
 	if !strings.EqualFold(keyPair.Public().Hex(), keyReq.PublicKey) {
 		return errors.New("generated public key does not equal provide public key")
 	}

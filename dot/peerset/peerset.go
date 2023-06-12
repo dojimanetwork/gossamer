@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ChainSafe/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/internal/log"
 	"github.com/libp2p/go-libp2p-core/peer"
 )
 

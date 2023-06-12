@@ -6,8 +6,8 @@ package modules
 import (
 	"net/http"
 
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/crypto/ed25519"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/crypto/ed25519"
 )
 
 // GrandpaModule init parameters
@@ -65,7 +65,7 @@ func (gm *GrandpaModule) ProveFinality(r *http.Request, req *ProveFinalityReques
 	}
 
 	// Leaving check in for linter
-	//nolint
+	// nolint
 	if req.authorityID != uint64(0) {
 		// TODO: Check if functionality relevant (#1404)
 	}

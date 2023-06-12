@@ -6,8 +6,8 @@ package modules
 import (
 	"net/http"
 
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/genesis"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/genesis"
 )
 
 // GenSyncSpecRequest represents request to get chain specification.

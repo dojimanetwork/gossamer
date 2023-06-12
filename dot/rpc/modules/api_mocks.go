@@ -4,11 +4,11 @@
 package modules
 
 import (
-	modulesmocks "github.com/ChainSafe/gossamer/dot/rpc/modules/mocks"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/common"
-	runtimemocks "github.com/ChainSafe/gossamer/lib/runtime/mocks"
-	"github.com/ChainSafe/gossamer/lib/transaction"
+	modulesmocks "github.com/dojimanetwork/gossamer/dot/rpc/modules/mocks"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	runtimemocks "github.com/dojimanetwork/gossamer/lib/runtime/mocks"
+	"github.com/dojimanetwork/gossamer/lib/transaction"
 	"github.com/stretchr/testify/mock"
 )
 

@@ -15,7 +15,7 @@ import (
 	"github.com/libp2p/go-libp2p-core/peer"
 	"github.com/libp2p/go-libp2p-core/protocol"
 
-	"github.com/ChainSafe/gossamer/dot/peerset"
+	"github.com/dojimanetwork/gossamer/dot/peerset"
 )
 
 const handshakeTimeout = time.Second * 10
@@ -65,9 +65,9 @@ type notificationsProtocol struct {
 	getHandshake             HandshakeGetter
 	handshakeDecoder         HandshakeDecoder
 	handshakeValidator       HandshakeValidator
-	outboundHandshakeMutexes *sync.Map //map[peer.ID]*sync.Mutex
-	inboundHandshakeData     *sync.Map //map[peer.ID]*handshakeData
-	outboundHandshakeData    *sync.Map //map[peer.ID]*handshakeData
+	outboundHandshakeMutexes *sync.Map // map[peer.ID]*sync.Mutex
+	inboundHandshakeData     *sync.Map // map[peer.ID]*handshakeData
+	outboundHandshakeData    *sync.Map // map[peer.ID]*handshakeData
 }
 
 func newNotificationsProtocol(protocolID protocol.ID, handshakeGetter HandshakeGetter,

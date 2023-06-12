@@ -6,7 +6,7 @@ package services
 import (
 	"reflect"
 
-	"github.com/ChainSafe/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/internal/log"
 )
 
 //go:generate mockery --name Service --structname Service --case underscore --keeptree

@@ -20,12 +20,12 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/ChainSafe/gossamer/dot/core"
-	"github.com/ChainSafe/gossamer/dot/rpc/modules/mocks"
-	testdata "github.com/ChainSafe/gossamer/dot/rpc/modules/test_data"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/runtime"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/dot/core"
+	"github.com/dojimanetwork/gossamer/dot/rpc/modules/mocks"
+	testdata "github.com/dojimanetwork/gossamer/dot/rpc/modules/test_data"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/runtime"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 
 	"github.com/stretchr/testify/assert"
 )

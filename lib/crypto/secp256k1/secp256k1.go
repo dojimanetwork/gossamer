@@ -8,8 +8,8 @@ import (
 	"encoding/hex"
 	"errors"
 
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/crypto"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/crypto"
 	secp256k1 "github.com/ethereum/go-ethereum/crypto"
 )
 
@@ -74,6 +74,12 @@ func NewKeypair(pk ecdsa.PrivateKey) *Keypair {
 	return &Keypair{
 		public:  &PublicKey{key: *pub.(*ecdsa.PublicKey)},
 		private: &PrivateKey{key: pk},
+	}
+}
+
+func NewPublicKey(pk ecdsa.PublicKey) PublicKey {
+	return PublicKey{
+		key: pk,
 	}
 }
 

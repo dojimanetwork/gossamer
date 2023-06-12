@@ -5,7 +5,7 @@ site_name: Gossamer Docs
 site_description: The Official Documentation for Gossamer | A Go Implementation of the Polkadot Host
 
 repo_name: chainsafe/gossamer
-repo_url: https://github.com/ChainSafe/gossamer
+repo_url: https://github.com/dojimanetwork/gossamer
 edit_uri: edit/development/docs/docs/
 
 # Configuration
@@ -74,6 +74,6 @@ extra_css:
 extra:
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/ChainSafe/gossamer
+      link: https://github.com/dojimanetwork/gossamer
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/ChainSafeth

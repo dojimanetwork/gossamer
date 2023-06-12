@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/tests/utils"
+	"github.com/dojimanetwork/gossamer/tests/utils"
 	"github.com/stretchr/testify/require"
 )
 
@@ -20,17 +20,17 @@ func TestOffchainRPC(t *testing.T) {
 	}
 
 	testCases := []*testCase{
-		{ //TODO
+		{ // TODO
 			description: "test offchain_localStorageSet",
 			method:      "offchain_localStorageSet",
 			skip:        true,
 		},
-		{ //TODO
+		{ // TODO
 			description: "test offchain_localStorageGet",
 			method:      "offchain_localStorageGet",
 			skip:        true,
 		},
-		{ //TODO
+		{ // TODO
 			description: "test offchain_localStorageGet",
 			method:      "offchain_localStorageGet",
 			skip:        true,

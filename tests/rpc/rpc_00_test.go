@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/ChainSafe/gossamer/tests/utils"
+	"github.com/dojimanetwork/gossamer/tests/utils"
 	"github.com/stretchr/testify/require"
 )
 

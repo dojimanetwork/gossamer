@@ -11,9 +11,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ChainSafe/gossamer/dot/peerset"
 	"github.com/chyeh/pubip"
 	"github.com/dgraph-io/ristretto"
+	"github.com/dojimanetwork/gossamer/dot/peerset"
 	badger "github.com/ipfs/go-ds-badger2"
 	"github.com/libp2p/go-libp2p"
 	libp2phost "github.com/libp2p/go-libp2p-core/host"

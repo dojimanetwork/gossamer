@@ -9,8 +9,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ChainSafe/gossamer/lib/crypto"
-	"github.com/ChainSafe/gossamer/lib/crypto/sr25519"
+	"github.com/dojimanetwork/gossamer/lib/crypto"
+	"github.com/dojimanetwork/gossamer/lib/crypto/sr25519"
 )
 
 var testPassword = []byte("1234")

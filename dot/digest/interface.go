@@ -6,8 +6,8 @@ package digest
 import (
 	"math/big"
 
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/grandpa"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/grandpa"
 )
 
 // BlockState interface for block state methods

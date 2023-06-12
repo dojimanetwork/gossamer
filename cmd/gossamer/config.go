@@ -10,19 +10,19 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ChainSafe/gossamer/chain/dev"
-	"github.com/ChainSafe/gossamer/chain/gssmr"
-	"github.com/ChainSafe/gossamer/dot"
-	ctoml "github.com/ChainSafe/gossamer/dot/config/toml"
-	"github.com/ChainSafe/gossamer/dot/state"
-	"github.com/ChainSafe/gossamer/dot/state/pruner"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/internal/log"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/genesis"
-	"github.com/ChainSafe/gossamer/lib/runtime/life"
-	"github.com/ChainSafe/gossamer/lib/runtime/wasmer"
-	"github.com/ChainSafe/gossamer/lib/utils"
+	"github.com/dojimanetwork/gossamer/chain/dev"
+	"github.com/dojimanetwork/gossamer/chain/gssmr"
+	"github.com/dojimanetwork/gossamer/dot"
+	ctoml "github.com/dojimanetwork/gossamer/dot/config/toml"
+	"github.com/dojimanetwork/gossamer/dot/state"
+	"github.com/dojimanetwork/gossamer/dot/state/pruner"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/genesis"
+	"github.com/dojimanetwork/gossamer/lib/runtime/life"
+	"github.com/dojimanetwork/gossamer/lib/runtime/wasmer"
+	"github.com/dojimanetwork/gossamer/lib/utils"
 	"github.com/urfave/cli"
 )
 
@@ -122,7 +122,7 @@ func createDotConfig(ctx *cli.Context) (*dot.Config, error) {
 	}
 
 	// TODO: log this better.
-	// See https://github.com/ChainSafe/gossamer/issues/1945
+	// See https://github.com/dojimanetwork/gossamer/issues/1945
 	logger.Infof("loaded package log configuration: %#v", cfg.Log)
 
 	// set global configuration values

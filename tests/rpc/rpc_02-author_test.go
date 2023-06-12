@@ -12,10 +12,10 @@ import (
 
 	"github.com/centrifuge/go-substrate-rpc-client/v3/scale"
 
-	"github.com/ChainSafe/gossamer/tests/utils"
 	gsrpc "github.com/centrifuge/go-substrate-rpc-client/v3"
 	"github.com/centrifuge/go-substrate-rpc-client/v3/signature"
 	"github.com/centrifuge/go-substrate-rpc-client/v3/types"
+	"github.com/dojimanetwork/gossamer/tests/utils"
 	"github.com/stretchr/testify/require"
 )
 
@@ -95,37 +95,37 @@ func TestAuthorRPC(t *testing.T) {
 	}
 
 	testCases := []*testCase{
-		{ //TODO
+		{ // TODO
 			description: "test author_submitExtrinsic",
 			method:      "author_submitExtrinsic",
 			skip:        true,
 		},
-		{ //TODO
+		{ // TODO
 			description: "test author_pendingExtrinsics",
 			method:      "author_pendingExtrinsics",
 			skip:        true,
 		},
-		{ //TODO
+		{ // TODO
 			description: "test author_removeExtrinsic",
 			method:      "author_removeExtrinsic",
 			skip:        true,
 		},
-		{ //TODO
+		{ // TODO
 			description: "test author_insertKey",
 			method:      "author_insertKey",
 			skip:        true,
 		},
-		{ //TODO
+		{ // TODO
 			description: "test author_rotateKeys",
 			method:      "author_rotateKeys",
 			skip:        true,
 		},
-		{ //TODO
+		{ // TODO
 			description: "test author_hasSessionKeys",
 			method:      "author_hasSessionKeys",
 			skip:        true,
 		},
-		{ //TODO
+		{ // TODO
 			description: "test author_hasKey",
 			method:      "author_hasKey",
 			skip:        true,

@@ -8,15 +8,15 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ChainSafe/gossamer/chain/dev"
-	"github.com/ChainSafe/gossamer/chain/gssmr"
-	"github.com/ChainSafe/gossamer/chain/kusama"
-	"github.com/ChainSafe/gossamer/chain/polkadot"
-	"github.com/ChainSafe/gossamer/dot/state/pruner"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/internal/log"
-	"github.com/ChainSafe/gossamer/internal/pprof"
-	"github.com/ChainSafe/gossamer/lib/genesis"
+	"github.com/dojimanetwork/gossamer/chain/dev"
+	"github.com/dojimanetwork/gossamer/chain/gssmr"
+	"github.com/dojimanetwork/gossamer/chain/kusama"
+	"github.com/dojimanetwork/gossamer/chain/polkadot"
+	"github.com/dojimanetwork/gossamer/dot/state/pruner"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/internal/pprof"
+	"github.com/dojimanetwork/gossamer/lib/genesis"
 )
 
 // TODO: update config to have toml rules and perhaps un-export some fields, since we don't want to expose all

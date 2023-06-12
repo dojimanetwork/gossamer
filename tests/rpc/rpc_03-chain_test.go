@@ -10,8 +10,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/dot/rpc/modules"
-	"github.com/ChainSafe/gossamer/tests/utils"
+	"github.com/dojimanetwork/gossamer/dot/rpc/modules"
+	"github.com/dojimanetwork/gossamer/tests/utils"
 	"github.com/gorilla/websocket"
 	"github.com/stretchr/testify/require"
 )
@@ -87,12 +87,12 @@ func TestChainRPC(t *testing.T) {
 				require.NotNil(t, test.expected.(modules.ChainBlockHeaderResponse).ExtrinsicsRoot)
 				require.NotNil(t, test.expected.(modules.ChainBlockHeaderResponse).Digest)
 
-				//save for chain_getBlock
+				// save for chain_getBlock
 				chainBlockHeaderHash = v.ParentHash
 			case *modules.ChainBlockResponse:
 				t.Log("Will assert ChainBlockResponse", "value", v.Block)
 
-				//reset
+				// reset
 				chainBlockHeaderHash = ""
 
 				require.NotNil(t, test.expected.(modules.ChainBlockResponse).Block)

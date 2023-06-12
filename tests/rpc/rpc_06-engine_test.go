@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/tests/utils"
+	"github.com/dojimanetwork/gossamer/tests/utils"
 	"github.com/stretchr/testify/require"
 )
 
@@ -20,12 +20,12 @@ func TestEngineRPC(t *testing.T) {
 	}
 
 	testCases := []*testCase{
-		{ //TODO
+		{ // TODO
 			description: "test engine_createBlock",
 			method:      "engine_createBlock",
 			skip:        true,
 		},
-		{ //TODO
+		{ // TODO
 			description: "test engine_finalizeBlock",
 			method:      "engine_finalizeBlock",
 			skip:        true,

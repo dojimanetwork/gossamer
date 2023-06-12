@@ -9,7 +9,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/ChainSafe/gossamer/lib/genesis"
+	"github.com/dojimanetwork/gossamer/lib/genesis"
 )
 
 var defaultGenesisSpecPath = "./chain/gssmr/genesis-spec.json"

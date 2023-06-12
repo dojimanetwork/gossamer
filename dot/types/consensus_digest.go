@@ -4,7 +4,7 @@
 package types
 
 import (
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 // NewBabeConsensusDigest constructs a vdt representing a babe consensus digest

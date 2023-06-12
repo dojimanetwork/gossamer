@@ -4,7 +4,7 @@
 package telemetry
 
 import (
-	"github.com/ChainSafe/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/common"
 )
 
 // notifyFinalizedTM holds `notify.finalized` telemetry message, which is

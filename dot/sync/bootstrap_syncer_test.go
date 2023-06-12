@@ -7,10 +7,10 @@ import (
 	"math/big"
 	"testing"
 
-	syncmocks "github.com/ChainSafe/gossamer/dot/sync/mocks"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/trie"
+	syncmocks "github.com/dojimanetwork/gossamer/dot/sync/mocks"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/trie"
 
 	"github.com/stretchr/testify/require"
 )

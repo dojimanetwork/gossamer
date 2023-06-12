@@ -8,7 +8,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/ChainSafe/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/common"
 
 	bip39 "github.com/cosmos/go-bip39"
 	"github.com/stretchr/testify/require"

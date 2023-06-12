@@ -7,8 +7,8 @@ import (
 	"encoding/hex"
 	"errors"
 
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/crypto"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/crypto"
 
 	sr25519 "github.com/ChainSafe/go-schnorrkel"
 	"github.com/gtank/merlin"
@@ -337,7 +337,7 @@ func (k *PublicKey) VrfVerify(t *merlin.Transcript, out [VRFOutputLength]byte,
 		return false, err
 	}
 
-	//inout := o.AttachInput(k.key, t)
+	// inout := o.AttachInput(k.key, t)
 	return k.key.VrfVerify(t, sr25519.NewOutput(out), p)
 }
 

@@ -4,7 +4,7 @@
 package transaction
 
 import (
-	"github.com/ChainSafe/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/dot/types"
 )
 
 // Validity struct see
@@ -54,20 +54,22 @@ func NewValidTransaction(extrinsic types.Extrinsic, validity *Validity) *ValidTr
 //
 // The status events can be grouped based on their kinds as:
 // 1. Entering/Moving within the pool:
-// 		- `Future`
-// 		- `Ready`
+//   - `Future`
+//   - `Ready`
+//
 // 2. Inside `Ready` queue:
-// 		- `Broadcast`
+//   - `Broadcast`
+//
 // 3. Leaving the pool:
-// 		- `InBlock`
-// 		- `Invalid`
-// 		- `Usurped`
-// 		- `Dropped`
-// 	4. Re-entering the pool:
-// 		- `Retracted`
-// 	5. Block finalized:
-// 		- `Finalized`
-// 		- `FinalityTimeout`
+//   - `InBlock`
+//   - `Invalid`
+//   - `Usurped`
+//   - `Dropped`
+//     4. Re-entering the pool:
+//   - `Retracted`
+//     5. Block finalized:
+//   - `Finalized`
+//   - `FinalityTimeout`
 type Status int64
 
 const (

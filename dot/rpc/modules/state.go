@@ -10,12 +10,12 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/runtime"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/runtime"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
-//StateGetReadProofRequest json fields
+// StateGetReadProofRequest json fields
 type StateGetReadProofRequest struct {
 	Keys []string
 	Hash common.Hash
@@ -113,7 +113,7 @@ type StateStorageKeysResponse []string
 // StateMetadataResponse holds the metadata
 type StateMetadataResponse string
 
-//StateGetReadProofResponse holds the response format
+// StateGetReadProofResponse holds the response format
 type StateGetReadProofResponse struct {
 	At    common.Hash `json:"at"`
 	Proof []string    `json:"proof"`
@@ -292,7 +292,8 @@ func (sm *StateModule) GetReadProof(
 }
 
 // GetRuntimeVersion Get the runtime version at a given block.
-//  If no block hash is provided, the latest version gets returned.
+//
+//	If no block hash is provided, the latest version gets returned.
 func (sm *StateModule) GetRuntimeVersion(
 	_ *http.Request, req *StateRuntimeVersionRequest, res *StateRuntimeVersionResponse) error {
 	rtVersion, err := sm.coreAPI.GetRuntimeVersion(req.Bhash)
@@ -342,7 +343,8 @@ func (sm *StateModule) GetStorage(
 }
 
 // GetStorageHash returns the hash of a storage entry at a block's state.
-//  If no block hash is provided, the latest value is returned.
+//
+//	If no block hash is provided, the latest value is returned.
 func (sm *StateModule) GetStorageHash(
 	_ *http.Request, req *StateStorageHashRequest, res *StateStorageHashResponse) error {
 	var (
@@ -372,7 +374,8 @@ func (sm *StateModule) GetStorageHash(
 }
 
 // GetStorageSize returns the size of a storage entry at a block's state.
-//  If no block hash is provided, the latest value is used.
+//
+//	If no block hash is provided, the latest value is used.
 func (sm *StateModule) GetStorageSize(
 	_ *http.Request, req *StateStorageSizeRequest, res *StateStorageSizeResponse) error {
 	var (
@@ -440,9 +443,10 @@ func (sm *StateModule) SubscribeRuntimeVersion(
 }
 
 // SubscribeStorage Storage subscription. If storage keys are specified, it creates a message for each block which
-//  changes the specified storage keys. If none are specified, then it creates a message for every block.
-//  This endpoint communicates over the Websocket protocol, but this func should remain here so it's
-// 	added to rpc_methods list
+//
+//	 changes the specified storage keys. If none are specified, then it creates a message for every block.
+//	 This endpoint communicates over the Websocket protocol, but this func should remain here so it's
+//		added to rpc_methods list
 func (*StateModule) SubscribeStorage(
 	_ *http.Request, _ *StateStorageQueryRangeRequest, _ *StorageChangeSetResponse) error {
 	return nil

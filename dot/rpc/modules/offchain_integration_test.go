@@ -10,8 +10,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/ChainSafe/gossamer/dot/rpc/modules/mocks"
-	"github.com/ChainSafe/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/dot/rpc/modules/mocks"
+	"github.com/dojimanetwork/gossamer/lib/common"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 )

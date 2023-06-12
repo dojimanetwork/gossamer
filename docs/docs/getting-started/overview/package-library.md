@@ -8,7 +8,7 @@ permalink: /welcome/package-library/
 
 Gossamer is a **modular blockchain framework**; it was designed with a package structure that makes it possible to reuse Gossamer packages to build and run custom nodes and node services.
 
-This document provides an overview of the packages that make up the Gossamer framework - more detailed information about each package can be found at <a target="_blank" rel="noopener noreferrer" href="https://pkg.go.dev/github.com/ChainSafe/gossamer">pkg.go.dev/ChainSafe/gossamer</a>.
+This document provides an overview of the packages that make up the Gossamer framework - more detailed information about each package can be found at <a target="_blank" rel="noopener noreferrer" href="https://pkg.go.dev/github.com/dojimanetwork/gossamer">pkg.go.dev/ChainSafe/gossamer</a>.
 
 Gossamer packages can be categorized into **four package types**:
 

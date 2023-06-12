@@ -85,7 +85,7 @@ Basic example which encodes and decodes a `uint`.
 ```
 import (
 	"fmt"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 func ExampleBasic() {
@@ -114,7 +114,7 @@ Use the `scale` struct tag for struct fields to conform to specific encoding seq
 ```
 import (
 	"fmt"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 func ExampleStruct() {
@@ -162,7 +162,7 @@ result.Set(scale.Ok, 10)
 ```
 import (
 	"fmt"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 func ExampleResult() {
@@ -216,7 +216,7 @@ interface with one `Index() uint` method that needs to be implemented.  The retu
 ```
 import (
 	"fmt"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 type MyStruct struct {

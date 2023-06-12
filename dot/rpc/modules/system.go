@@ -10,11 +10,11 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/crypto"
-	"github.com/ChainSafe/gossamer/pkg/scale"
 	"github.com/btcsuite/btcutil/base58"
 	ctypes "github.com/centrifuge/go-substrate-rpc-client/v3/types"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/crypto"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 )
 
 // SystemModule is an RPC module providing access to core API points
@@ -258,7 +258,7 @@ func (sm *SystemModule) LocalListenAddresses(r *http.Request, req *EmptyRequest,
 }
 
 // LocalPeerId Returns the base58-encoded PeerId fo the node.
-//nolint
+// nolint
 func (sm *SystemModule) LocalPeerId(r *http.Request, req *EmptyRequest, res *string) error {
 	netstate := sm.networkAPI.NetworkState()
 	if netstate.PeerID == "" {

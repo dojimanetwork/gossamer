@@ -8,7 +8,7 @@ import (
 	"errors"
 	"runtime"
 
-	"github.com/ChainSafe/gossamer/internal/httpserver"
+	"github.com/dojimanetwork/gossamer/internal/httpserver"
 )
 
 // Service is a pprof http server service compatible with the

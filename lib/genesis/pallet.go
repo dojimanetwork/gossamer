@@ -3,7 +3,7 @@
 
 package genesis
 
-import "github.com/ChainSafe/gossamer/pkg/scale"
+import "github.com/dojimanetwork/gossamer/pkg/scale"
 
 type contracts struct {
 	CurrentSchedule struct {

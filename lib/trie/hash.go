@@ -11,8 +11,8 @@ import (
 	"io"
 	"sync"
 
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 	"golang.org/x/crypto/blake2b"
 )
 

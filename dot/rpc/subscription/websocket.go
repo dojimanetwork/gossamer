@@ -15,10 +15,10 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/ChainSafe/gossamer/dot/rpc/modules"
-	"github.com/ChainSafe/gossamer/internal/log"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/runtime"
+	"github.com/dojimanetwork/gossamer/dot/rpc/modules"
+	"github.com/dojimanetwork/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/runtime"
 	"github.com/gorilla/websocket"
 )
 
@@ -67,7 +67,7 @@ func (c *WSConn) readWebsocketMessage() ([]byte, map[string]interface{}, error) 
 	return mbytes, msg, nil
 }
 
-//HandleComm handles messages received on websocket connections
+// HandleComm handles messages received on websocket connections
 func (c *WSConn) HandleComm() {
 	for {
 		mbytes, msg, err := c.readWebsocketMessage()

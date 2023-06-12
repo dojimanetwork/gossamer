@@ -10,12 +10,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/dot/network"
-	syncmocks "github.com/ChainSafe/gossamer/dot/sync/mocks"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/common/variadic"
-	"github.com/ChainSafe/gossamer/lib/trie"
+	"github.com/dojimanetwork/gossamer/dot/network"
+	syncmocks "github.com/dojimanetwork/gossamer/dot/sync/mocks"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/common/variadic"
+	"github.com/dojimanetwork/gossamer/lib/trie"
 
 	"github.com/libp2p/go-libp2p-core/peer"
 

@@ -11,9 +11,9 @@ import (
 	"syscall"
 	"testing"
 
-	"github.com/ChainSafe/gossamer/dot"
-	"github.com/ChainSafe/gossamer/internal/log"
-	"github.com/ChainSafe/gossamer/lib/utils"
+	"github.com/dojimanetwork/gossamer/dot"
+	"github.com/dojimanetwork/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/lib/utils"
 	"github.com/stretchr/testify/require"
 	"github.com/urfave/cli"
 	terminal "golang.org/x/term"

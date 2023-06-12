@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/dot/rpc/modules"
-	"github.com/ChainSafe/gossamer/tests/utils"
+	"github.com/dojimanetwork/gossamer/dot/rpc/modules"
+	"github.com/dojimanetwork/gossamer/tests/utils"
 	"github.com/stretchr/testify/require"
 )
 
@@ -21,22 +21,22 @@ func TestSystemRPC(t *testing.T) {
 	}
 
 	testCases := []*testCase{
-		{ //TODO
+		{ // TODO
 			description: "test system_name",
 			method:      "system_name",
 			skip:        true,
 		},
-		{ //TODO
+		{ // TODO
 			description: "test system_version",
 			method:      "system_version",
 			skip:        true,
 		},
-		{ //TODO
+		{ // TODO
 			description: "test system_chain",
 			method:      "system_chain",
 			skip:        true,
 		},
-		{ //TODO
+		{ // TODO
 			description: "test system_properties",
 			method:      "system_properties",
 			skip:        true,
@@ -68,22 +68,22 @@ func TestSystemRPC(t *testing.T) {
 			},
 			params: "{}",
 		},
-		{ //TODO
+		{ // TODO
 			description: "test system_addReservedPeer",
 			method:      "system_addReservedPeer",
 			skip:        true,
 		},
-		{ //TODO
+		{ // TODO
 			description: "test system_removeReservedPeer",
 			method:      "system_removeReservedPeer",
 			skip:        true,
 		},
-		{ //TODO
+		{ // TODO
 			description: "test system_nodeRoles",
 			method:      "system_nodeRoles",
 			skip:        true,
 		},
-		{ //TODO
+		{ // TODO
 			description: "test system_accountNextIndex",
 			method:      "system_accountNextIndex",
 			skip:        true,
@@ -93,7 +93,7 @@ func TestSystemRPC(t *testing.T) {
 	t.Log("starting gossamer...")
 	nodes, err := utils.InitializeAndStartNodes(t, 3, utils.GenesisDefault, utils.ConfigDefault)
 
-	//use only first server for tests
+	// use only first server for tests
 	require.Nil(t, err)
 
 	time.Sleep(time.Second) // give server a second to start
@@ -121,9 +121,9 @@ func TestSystemRPC(t *testing.T) {
 
 				require.NotNil(t, v)
 
-				//TODO: #807
-				//this assertion requires more time on init to be enabled
-				//require.GreaterOrEqual(t, len(v.Peers), 2)
+				// TODO: #807
+				// this assertion requires more time on init to be enabled
+				// require.GreaterOrEqual(t, len(v.Peers), 2)
 
 				for _, vv := range *v {
 					require.NotNil(t, vv.PeerID)

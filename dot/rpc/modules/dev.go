@@ -8,7 +8,7 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/ChainSafe/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/common"
 )
 
 var blockProducerStoppedMsg = "babe service stopped"

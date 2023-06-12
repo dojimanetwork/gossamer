@@ -12,7 +12,7 @@ Install <a target="_blank" rel="noopener noreferrer" href="https://golang.org/">
 
 ## Installation
 
-Get the <a target="_blank" rel="noopener noreferrer" href="https://github.com/ChainSafe/gossamer">ChainSafe/gossamer</a> repository:
+Get the <a target="_blank" rel="noopener noreferrer" href="https://github.com/dojimanetwork/gossamer">ChainSafe/gossamer</a> repository:
 ```
 git clone git@github.com:ChainSafe/gossamer
 cd gossamer

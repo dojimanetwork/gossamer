@@ -3,7 +3,7 @@
 package mocks
 
 import (
-	genesis "github.com/ChainSafe/gossamer/lib/genesis"
+	genesis "github.com/dojimanetwork/gossamer/lib/genesis"
 	mock "github.com/stretchr/testify/mock"
 )
 

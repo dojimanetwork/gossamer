@@ -20,7 +20,7 @@ import (
 	"github.com/ChainSafe/chaindb"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ChainSafe/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/common"
 )
 
 type commonPrefixTest struct {

@@ -6,7 +6,7 @@ package network
 import (
 	"sync"
 
-	"github.com/ChainSafe/gossamer/internal/log"
+	"github.com/dojimanetwork/gossamer/internal/log"
 )
 
 // gossip submodule

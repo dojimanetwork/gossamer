@@ -10,7 +10,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ChainSafe/gossamer/tests/utils"
+	"github.com/dojimanetwork/gossamer/tests/utils"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -35,8 +35,8 @@ func TestStartGossamerAndPolkadotAPI(t *testing.T) {
 	data, err := exec.Command(parts[0], parts[1:]...).Output()
 	assert.NoError(t, err, string(data))
 
-	//uncomment this to see log results from javascript tests
-	//fmt.Printf("%s\n", data)
+	// uncomment this to see log results from javascript tests
+	// fmt.Printf("%s\n", data)
 
 	t.Log("going to tear down gossamer...")
 	errList := utils.TearDown(t, nodes)

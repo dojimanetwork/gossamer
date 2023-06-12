@@ -3,7 +3,7 @@
 package mocks
 
 import (
-	types "github.com/ChainSafe/gossamer/dot/types"
+	types "github.com/dojimanetwork/gossamer/dot/types"
 	mock "github.com/stretchr/testify/mock"
 )
 

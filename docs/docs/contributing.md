@@ -8,7 +8,7 @@ At any point in this process feel free to reach out on [Discord](https://discord
 
 Generally, it is important to have a basic understanding of Polkadot and the Polkadot Runtime Environment. Having a stronger  understanding will allow you to make more significant contributions. We've put together a list of resources that can help you develop this fundamental knowledge.  
 
-The Web3 Foundation has a [Polkadot Wiki](https://wiki.polkadot.network/docs/en/learn-introduction) that would help both part-time and core contributors to the project in order to get up to speed. Our [wiki](https://github.com/ChainSafe/gossamer/wiki) also has some helpful resources. 
+The Web3 Foundation has a [Polkadot Wiki](https://wiki.polkadot.network/docs/en/learn-introduction) that would help both part-time and core contributors to the project in order to get up to speed. Our [wiki](https://github.com/dojimanetwork/gossamer/wiki) also has some helpful resources. 
 
 The [Polkadot Runtime Specification](https://research.web3.foundation/en/latest/_static/pdfview/viewer.html?file=../pdf/polkadot_re_spec.pdf) serves as our primary specification, however it is currently in its draft status so things may be subject to change.
 
@@ -21,11 +21,11 @@ One important thing distinction is that we are building the Polkadot Runtime Env
 **2. Create a local clone of gossamer.**
 
 ```
-go get -u github.com/ChainSafe/gossamer
-cd $GOPATH/src/github.com/ChainSafe/gossamer
+go get -u github.com/dojimanetwork/gossamer
+cd $GOPATH/src/github.com/dojimanetwork/gossamer
 git init
 ```
-You may encounter a `package github.com/ChainSafe/gossamer: no Go files in ...` message when doing `go get`. This is not an error, since there are no go files in the project root.
+You may encounter a `package github.com/dojimanetwork/gossamer: no Go files in ...` message when doing `go get`. This is not an error, since there are no go files in the project root.
 
 **3. Link your local clone to the fork on your Github repo.**
 
@@ -36,13 +36,13 @@ $ git remote add your-gossamer-repo https://github.com/<your_github_user_name>/g
 **4. Link your local clone to the ChainSafe Systems repo so that you can easily fetch future changes to the ChainSafe Systems repo.**
      
 ```
-$ git remote add gossamer https://github.com/ChainSafe/gossamer.git
+$ git remote add gossamer https://github.com/dojimanetwork/gossamer.git
 $ git remote -v (you should see myrepo and gossamer in the list of remotes)
 ```
 
 **5. Find something to work on.**
 
-To start, check out our open issues. We recommend starting with an [issue labeled `Good First Issue`](https://github.com/ChainSafe/gossamer/issues?q=is%3Aopen+is%3Aissue+label%3A%22Good+First+Issue%22). Leave a comment to let us know that you would like to work on it. 
+To start, check out our open issues. We recommend starting with an [issue labeled `Good First Issue`](https://github.com/dojimanetwork/gossamer/issues?q=is%3Aopen+is%3Aissue+label%3A%22Good+First+Issue%22). Leave a comment to let us know that you would like to work on it. 
 
 Another option is to improve gossamer where you see fit based on your evaluation of our code. In order to best facilitate collaboration, please create an issue before you start working on it.
 
@@ -72,7 +72,7 @@ $ make lint
 
 **9. Create a pull request.**
 
-Navigate your browser to [https://github.com/ChainSafe/gossamer](https://github.com/ChainSafe/gossamer) and click on the new pull request button. In the “base” box on the left, change the branch to “**base development**”, the branch that you want your changes to be applied to. In the “compare” box on the right, select feature-in-progress-branch, the branch containing the changes you want to apply. You will then be asked to answer a few questions about your pull request. After you complete the questionnaire, the pull request will appear in the list of pull requests at [https://github.com/ChainSafe/gossamer/pulls](https://github.com/ChainSafe/gossamer/pulls).
+Navigate your browser to [https://github.com/dojimanetwork/gossamer](https://github.com/dojimanetwork/gossamer) and click on the new pull request button. In the “base” box on the left, change the branch to “**base development**”, the branch that you want your changes to be applied to. In the “compare” box on the right, select feature-in-progress-branch, the branch containing the changes you want to apply. You will then be asked to answer a few questions about your pull request. After you complete the questionnaire, the pull request will appear in the list of pull requests at [https://github.com/dojimanetwork/gossamer/pulls](https://github.com/dojimanetwork/gossamer/pulls).
 
 ## Note on memory intensive tests
 Unfortunately, the free tier for CI's have a memory cap and some tests will cause the CI to experience an out of memory error.

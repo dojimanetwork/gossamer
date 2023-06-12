@@ -18,11 +18,11 @@ RUN wget -O /usr/local/bin/subkey https://chainbridge.ams3.digitaloceanspaces.co
     chmod +x /usr/local/bin/subkey
 
 # Polkadot JS dependencies
-WORKDIR /go/src/github.com/ChainSafe/gossamer/tests/polkadotjs_test
+WORKDIR /go/src/github.com/dojimanetwork/gossamer/tests/polkadotjs_test
 COPY tests/polkadotjs_test/package.json tests/polkadotjs_test/package-lock.json ./
 RUN npm install
 
-WORKDIR /go/src/github.com/ChainSafe/gossamer
+WORKDIR /go/src/github.com/dojimanetwork/gossamer
 
 # Go dependencies
 COPY go.mod go.sum ./
@@ -49,7 +49,7 @@ WORKDIR /gossamer
 
 # Install libwasmer.so
 ENV LD_LIBRARY_PATH=/lib:/usr/lib
-COPY --from=builder /go/src/github.com/ChainSafe/gossamer/libwasmer.so /lib/libwasmer.so
+COPY --from=builder /go/src/github.com/dojimanetwork/gossamer/libwasmer.so /lib/libwasmer.so
 
 EXPOSE 7001 8546 8540
 
@@ -58,4 +58,4 @@ CMD ["/gossamer/bin/gossamer"]
 
 COPY chain /gossamer/chain
 COPY scripts/docker-entrypoint.sh /gossamer/docker-entrypoint.sh
-COPY --from=builder /go/src/github.com/ChainSafe/gossamer/bin/gossamer /gossamer/bin/gossamer
+COPY --from=builder /go/src/github.com/dojimanetwork/gossamer/bin/gossamer /gossamer/bin/gossamer

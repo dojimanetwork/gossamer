@@ -8,7 +8,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ChainSafe/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/common"
 
 	"github.com/ChainSafe/chaindb"
 )
@@ -218,7 +218,9 @@ func (t *Trie) DeleteFromDB(db chaindb.Database, key []byte) error {
 
 // ClearPrefixFromDB deletes all keys with the given prefix from the trie
 // and writes the updated nodes the database. Since it needs to write all
-//  the nodes from the changed node up to the root, it writes these
+//
+//	the nodes from the changed node up to the root, it writes these
+//
 // in a batch operation.
 func (t *Trie) ClearPrefixFromDB(db chaindb.Database, prefix []byte) error {
 	t.ClearPrefix(prefix)

@@ -3,7 +3,7 @@
 
 package telemetry
 
-import "github.com/ChainSafe/gossamer/lib/common"
+import "github.com/dojimanetwork/gossamer/lib/common"
 
 // systemConnectedTM struct to hold system connected telemetry messages
 type systemConnectedTM struct {

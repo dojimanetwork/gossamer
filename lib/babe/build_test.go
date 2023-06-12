@@ -9,18 +9,18 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/dot/state"
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/crypto/sr25519"
-	"github.com/ChainSafe/gossamer/lib/runtime"
-	"github.com/ChainSafe/gossamer/lib/transaction"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/dot/state"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/crypto/sr25519"
+	"github.com/dojimanetwork/gossamer/lib/runtime"
+	"github.com/dojimanetwork/gossamer/lib/transaction"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 
-	"github.com/ChainSafe/gossamer/internal/log"
 	cscale "github.com/centrifuge/go-substrate-rpc-client/v3/scale"
 	"github.com/centrifuge/go-substrate-rpc-client/v3/signature"
 	ctypes "github.com/centrifuge/go-substrate-rpc-client/v3/types"
+	"github.com/dojimanetwork/gossamer/internal/log"
 	"github.com/ethereum/go-ethereum/metrics"
 	"github.com/stretchr/testify/require"
 )
@@ -250,7 +250,7 @@ func TestApplyExtrinsic(t *testing.T) {
 	header, err := types.NewHeader(parentHash, common.Hash{}, common.Hash{}, big.NewInt(1), digest)
 	require.NoError(t, err)
 
-	//initialise block header
+	// initialise block header
 	err = rt.InitializeBlock(header)
 	require.NoError(t, err)
 
@@ -299,7 +299,7 @@ func TestBuildAndApplyExtrinsic(t *testing.T) {
 	rt, err := babeService.blockState.GetRuntime(nil)
 	require.NoError(t, err)
 
-	//initialise block header
+	// initialise block header
 	err = rt.InitializeBlock(header)
 	require.NoError(t, err)
 

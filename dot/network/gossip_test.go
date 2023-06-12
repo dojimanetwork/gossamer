@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/lib/utils"
+	"github.com/dojimanetwork/gossamer/lib/utils"
 
 	"github.com/stretchr/testify/require"
 )

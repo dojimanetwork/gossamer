@@ -8,14 +8,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/gossamer/dot/types"
-	"github.com/ChainSafe/gossamer/lib/common"
-	"github.com/ChainSafe/gossamer/lib/genesis"
-	"github.com/ChainSafe/gossamer/lib/keystore"
-	"github.com/ChainSafe/gossamer/lib/runtime"
-	"github.com/ChainSafe/gossamer/lib/runtime/storage"
-	"github.com/ChainSafe/gossamer/lib/trie"
-	"github.com/ChainSafe/gossamer/pkg/scale"
+	"github.com/dojimanetwork/gossamer/dot/types"
+	"github.com/dojimanetwork/gossamer/lib/common"
+	"github.com/dojimanetwork/gossamer/lib/genesis"
+	"github.com/dojimanetwork/gossamer/lib/keystore"
+	"github.com/dojimanetwork/gossamer/lib/runtime"
+	"github.com/dojimanetwork/gossamer/lib/runtime/storage"
+	"github.com/dojimanetwork/gossamer/lib/trie"
+	"github.com/dojimanetwork/gossamer/pkg/scale"
 	"github.com/stretchr/testify/require"
 )
 
@@ -145,7 +145,7 @@ func buildBlock(t *testing.T, instance runtime.Instance) *types.Block {
 	inherentExts, err := instance.InherentExtrinsics(ienc)
 	require.NoError(t, err)
 
-	//// decode inherent extrinsics
+	// // decode inherent extrinsics
 	var exts [][]byte
 	err = scale.Unmarshal(inherentExts, &exts)
 	require.NoError(t, err)
